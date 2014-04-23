@@ -76,6 +76,9 @@ hr {
     padding: 0;
 }
 
+/*****************************
+ 	Blockquote
+*****************************/
 blockquote {
 	margin: 2em 10px;
 	padding-left: 1.5em;
@@ -87,6 +90,77 @@ blockquote {
 	background-position: left top;
 	background-repeat: no-repeat;
 	text-indent: 23px;
+}
+
+/*****************************
+ 	Loader
+*****************************/
+.loader {
+    display: block;
+    position: fixed;
+    z-index: 100;
+    top: 22px;
+    right: -moz-calc(50%);
+    right: -webkit-calc(50%);
+    right: calc(50%);
+}
+
+.loader-icon {
+    width: 18px;
+    height: 18px;
+    border: solid 2px transparent;
+    border-top-color: #f0f0f0;
+    border-left-color: #f0f0f0;
+    border-radius: 50%;
+    -webkit-animation: loader 400ms linear infinite;
+    -webkit-animation-fill-mode: both;
+    -moz-animation: loader 400ms linear infinite;
+    -moz-animation-fill-mode: both;
+    -o-animation: loader 400ms linear infinite;
+    -o-animation-fill-mode: both;
+    animation: loader 400ms linear infinite;
+    animation-fill-mode: both;
+}
+
+/*****************************
+ 	TOOLTIP
+*****************************/
+.tooltip {
+    opacity:0;
+    display: inline-block;
+    padding: 4px 8px 5px 8px;
+    position:absolute;
+    top: -23px;
+    left: -21px;
+    color: rgba(255,255,255,0.9);
+    font-size: 1.1rem;
+    line-height: 1em;
+    text-align: center;
+    background: #50585D;
+    border-radius:20px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    transition: opacity 0.3s ease, top 0.3s ease;
+}
+
+/* The little chiclet arrow under the tooltip, pointing down */
+.tooltip:after {
+    content:"";
+    border-width:5px 5px 0 5px;
+    border-style:solid;
+    border-color: #50585D transparent;
+    display:block;
+    position:absolute;
+    bottom:-4px;
+    left:50%;
+    margin-left:-5px;
+    z-index: 220;
+    width:0;
+}
+
+/* On hover, show the tooltip! */
+.connect-common:hover .tooltip {
+    opacity: 1;
+    top: -33px;
 }
 
 /*****************************

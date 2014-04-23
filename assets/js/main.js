@@ -1,14 +1,18 @@
 /**
- * Main JS file for Casper behaviours
+ * Contains all site wide scripts
  */
 
-/*globals jQuery, document */
 (function ($) {
     "use strict";
 
     $(document).ready(function(){
 
         $(".post-content").fitVids();
+
+        /* Make specific links open in a new window in a HTML5 valid way */
+        $('a[rel*="external"]').click(function(){
+          $(this).attr('target', '_blank');
+        })
 
         function casperFullImg() {
             $("img").each( function() {
@@ -26,12 +30,19 @@
         casperFullImg();
         $(window).smartresize(casperFullImg);
 
+        /* # Show loader untill everything's loaded. */
+        $('.loader').hide();
+    });
+
+    $(window).load(function(){
+
+      /* # All loaded, hide loader. */
+      $('.loader').show();
     });
 
 }(jQuery));
 
 (function($,sr){
-
   // debouncing function from John Hann
   // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
   var debounce = function (func, threshold, execAsap) {
