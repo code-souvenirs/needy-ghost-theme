@@ -3,23 +3,28 @@
 {{#foreach posts}}
 <article>
     <header class="post-excerpt-header">
-        <a href="{{url}}"><h2>{{title}}</h2></a>
+        <h2><a href="{{url}}" title="Read &quot;{{title}}&quot;">{{title}}</a></h2>
         <hr />
-        <span class="post-metainfo">
-            <span class="author">Jaspalsinh Chauhan</span>
-            <span><time class="postedon" datetime="2014-05.21">2014.05.21</time></span>
-        </span>
+        {{! Needy Ghost Theme: Post wide meta information - Author, Published time }}
+        {{> post-meta}}
     </header>
     <section class="post-excerpt-content">
-        <p>
-            If <a href="google.com">we quantify the pixel</a>, we can get to the SMS protocol through the optical RAM feed! Use the back-end RAM panel, then 
-        
-        you can input the digital hard drive! The RSS feed is down, input the primary protocol so we can bypass the CSS monitor. Try to compress the CSS circuit, maybe it will input the back-end card&hellip;<span class="keep-reading"><a href="#">keep reading</a></span>
-        </p>
+        <p>{{excerpt characters="350"}}&hellip;<span class="keep-reading"><a href="{{url}}" title="Read &quot;{{title}}&quot;">keep reading</a></span></p>
     </section>
     <footer class="post-excerpt-footer">
-        <span class="post-excerpt-footer-taglabel">.NET framework, .NET framework 4.0, .NET runtime optimization service, AutoNGEN, common language runtime native compiler, mscorsvw.exe, NGEN, NGEN.exe, windows update
-        </span>
+        {{! Needy Ghost Theme: Post wide tags }}
+        {{#if tags}}
+            <span class="post-excerpt-footer-taglabel">{{tags}}</span>
+        {{/if}}
     </footer>
 </article>
 {{/foreach}}
+
+{{! Pagination }}
+{{#if pagination.prev}}
+    {{pagination}}
+{{else}}
+    {{#if pagination.next}}
+        {{pagination}}
+    {{/if}}
+{{/if}}

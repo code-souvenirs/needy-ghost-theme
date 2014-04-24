@@ -31,13 +31,13 @@
         $(window).smartresize(casperFullImg);
 
         /* # Show loader untill everything's loaded. */
-        $('.loader').hide();
+        $('.loader').show();
     });
 
     $(window).load(function(){
 
       /* # All loaded, hide loader. */
-      $('.loader').show();
+      $('.loader').hide();
     });
 
 }(jQuery));

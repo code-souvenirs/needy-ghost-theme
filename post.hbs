@@ -1,1 +1,42 @@
-{\rtf1}
+{{!< default}}
+{{#post}}
+	<article>
+	    <header class="post-excerpt-header">
+	        <h2><a href="{{url}}">{{title}}</a></h2>
+	        <hr />
+	        {{! Needy Ghost Theme: Post wide meta information - Author, Published time }}
+        	{{> post-meta}}
+	    </header>
+	    <section class="post-excerpt-content">
+	        <div class="post-content">{{content}}</div>
+	    </section>
+	    <hr />
+	    <footer class="post-excerpt-footer">
+	        <div id="profile"><img src="{{author.image}}" alt="Photograph of Jsinh" class="profile-photo"><a href="{{author.website}}"><h2>{{author.name}}</h2></a>
+	        </div>
+	        <div id="about-me-text">
+	            <span>{{author.bio}}</span>
+	        </div>
+	        <div id="tag-cloud">
+	        {{! Needy Ghost Theme: Post wide tags }}
+        	{{#if tags}}
+	            <span class="post-excerpt-footer-taglabel">{{tags}}</span>
+    	    {{/if}}
+	        </div>
+	        {{! Disqus integration }}
+        	<div id="disqus_thread"></div>
+        		<script type="text/javascript">
+        			var disqus_shortname = 'blog-jsinh';
+        			/* * * DON'T EDIT BELOW THIS LINE * * */
+        			(function() {
+        				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        				dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        			})();
+        		</script>
+        		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        		<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+	    </footer>
+	</article>
+{{/post}}

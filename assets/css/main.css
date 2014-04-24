@@ -157,10 +157,68 @@ blockquote {
     width:0;
 }
 
-/* On hover, show the tooltip! */
-.connect-common:hover .tooltip {
-    opacity: 1;
+.youtube:hover .tooltip {
+	opacity: 1;
     top: -33px;
+}
+
+.skype:hover .tooltip {
+	opacity: 1;
+    top: -33px;
+}
+
+.linkedin:hover .tooltip {
+	opacity: 1;
+    top: -33px;
+}
+
+.facebook:hover .tooltip {
+	opacity: 1;
+    top: -33px;
+}
+
+.googlep:hover .tooltip {
+	opacity: 1;
+    top: -33px;
+}
+
+.twitter:hover .tooltip {
+	opacity: 1;
+    top: -33px;
+}
+
+.github:hover .tooltip {
+	opacity: 1;
+    top: -33px;
+}
+
+.dropbox:hover .tooltip {
+	opacity: 1;
+    top: -33px;
+}
+
+.tumblr:hover .tooltip {
+	opacity: 1;
+    top: -33px;
+}
+
+.rss:hover .tooltip {
+	opacity: 1;
+    top: -33px;
+}
+
+/*****************************
+ 	PAGINATION
+*****************************/
+
+.pagination {
+    padding-top: .5em;
+}
+.pagination .older-posts {
+    float: right;
+}
+.pagination .newer-posts {
+    float: left;
 }
 
 /*****************************
@@ -438,7 +496,6 @@ header {
 #sidebar-adsense {
 	width: 165px;
 	height: 605px;
-	background-color: grey;
 	margin: 25px auto;
 }
 
