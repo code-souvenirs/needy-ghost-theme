@@ -116,6 +116,29 @@ pre code, tt {
     padding: 0;
 }
 
+.hljs {
+	background-color: #ebebeb;
+}
+
+/*****************************
+ 	BACK TO TOP
+*****************************/
+
+.back-to-top {
+    position: fixed;
+    bottom: 2em;
+    right: 0px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #DF5A48;
+    padding: 0.6em;
+    display: none;
+}
+
+.back-to-top:hover {    
+    background-color: rgba(135, 135, 135, 0.50);
+}
+
 /*****************************
  	Blockquote
 *****************************/
@@ -346,7 +369,7 @@ header {
 }
 
 .post-excerpt-content {
-	margin: 20px 0 15px 10px;
+	margin: 20px 10px 15px 10px;
 	color: #3A4145;
 	line-height: 1.50em;
 	font-weight: normal;

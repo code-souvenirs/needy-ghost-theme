@@ -27,17 +27,15 @@
 
         {{! Style imports }}
         <!-- Normalize First -->
-        <link rel="stylesheet" type="text/css" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
-        <!-- Site wide styles -->
-        <link rel="stylesheet" type="text/css" src="{{asset "/css/main.min.css"}}" />
-        <!-- Responsive UI styles -->
-        <link rel="stylesheet" type="text/css" src="{{asset "/css/responsive.css"}}" />
-        <!-- Style for syntax highlighting -->
-        <link rel="stylesheet" type="text/css" src="http://yandex.st/highlightjs/8.0/styles/default.min.css">
+        <link rel="stylesheet" type="text/css" href="{{asset "/css/normalize.css"}}" />
         <!-- Style for syntax highlighting - Gangnam..oops Github style -->
-        <link rel="stylesheet" type="text/css" src="http://yandex.st/highlightjs/8.0/styles/github.min.css">
+        <link rel="stylesheet" type="text/css" href="http://yandex.st/highlightjs/8.0/styles/github.min.css">
+        <!-- Site wide styles -->
+        <link rel="stylesheet" type="text/css" href="{{asset "/css/main.css"}}" />
+        <!-- Responsive UI styles -->
+        <link rel="stylesheet" type="text/css" href="{{asset "/css/responsive.css"}}" />
         <!-- Style for tooltip / hit -->
-        <link rel="stylesheet" type="text/css" src="{{asset "/css/hint.min.css"}}">
+        <link rel="stylesheet" type="text/css" href="{{asset "/css/hint.css"}}">
 
 		{{! Touch icons and favicon }}
 		<!-- TODO: Create this icons to support apple touch devices
@@ -78,6 +76,8 @@
             {{> sidebar}}
         </div>
 
+        <a href="#" class="back-to-top">Back to Top</a>
+
         {{! Needy Ghost Theme: Site wide disclaimer }}
         {{> disclaimer}}
 
@@ -95,14 +95,12 @@
         {{ghost_foot}}
 
         {{! Awwaal scripts load here }}
-        <!-- Load: jQuery -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <!-- Load: FitVids - making videos responsive -->
         <script src="//cdn.jsdelivr.net/fitvids/1.1.0/jquery.fitvids.js"></script>
         <!-- Load: Highlight - formatting for code snippets -->
         <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
         <!-- Load: Main - site wide script -->
-        <script type="text/javascript" src="{{asset "/js/main.min.js"}}"></script>
+        <script type="text/javascript" src="{{asset "/js/main.js"}}"></script>
         <!-- Initialize: code formatter - Highlight -->
         <script>hljs.initHighlightingOnLoad();</script>
     </body>
