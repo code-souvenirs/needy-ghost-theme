@@ -27,13 +27,17 @@
 
         {{! Style imports }}
         <!-- Normalize First -->
-        <link rel="stylesheet" type="text/css" href="{{asset "/css/normalize.css"}}" />
+        <link rel="stylesheet" type="text/css" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
         <!-- Site wide styles -->
-        <link rel="stylesheet" type="text/css" href="{{asset "/css/main.css"}}" />
+        <link rel="stylesheet" type="text/css" src="{{asset "/css/main.min.css"}}" />
+        <!-- Responsive UI styles -->
+        <link rel="stylesheet" type="text/css" src="{{asset "/css/responsive.css"}}" />
         <!-- Style for syntax highlighting -->
-        <link rel="stylesheet" href="{{asset "/css/default.css"}}">
+        <link rel="stylesheet" type="text/css" src="http://yandex.st/highlightjs/8.0/styles/default.min.css">
         <!-- Style for syntax highlighting - Gangnam..oops Github style -->
-        <link rel="stylesheet" href="{{asset "/css/github.css"}}">
+        <link rel="stylesheet" type="text/css" src="http://yandex.st/highlightjs/8.0/styles/github.min.css">
+        <!-- Style for tooltip / hit -->
+        <link rel="stylesheet" type="text/css" src="{{asset "/css/hint.min.css"}}">
 
 		{{! Touch icons and favicon }}
 		<!-- TODO: Create this icons to support apple touch devices
@@ -92,13 +96,13 @@
 
         {{! Awwaal scripts load here }}
         <!-- Load: jQuery -->
-        <script type="text/javascript" src="{{asset "/js/vendor/jquery-1.10.2.min.js"}}"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <!-- Load: FitVids - making videos responsive -->
-        <script type="text/javascript" src="{{asset "/js/plugins/jquery.fitvids.js"}}"></script>
+        <script src="//cdn.jsdelivr.net/fitvids/1.1.0/jquery.fitvids.js"></script>
         <!-- Load: Highlight - formatting for code snippets -->
-        <script type="text/javascript" src="{{asset "/js/plugins/highlight.pack.js"}}"></script>
+        <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
         <!-- Load: Main - site wide script -->
-        <script type="text/javascript" src="{{asset "/js/main.js"}}"></script>
+        <script type="text/javascript" src="{{asset "/js/main.min.js"}}"></script>
         <!-- Initialize: code formatter - Highlight -->
         <script>hljs.initHighlightingOnLoad();</script>
     </body>

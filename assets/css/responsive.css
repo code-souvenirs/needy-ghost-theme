@@ -1,0 +1,9 @@
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  	#content {
+		min-width: 98%;
+	}
+
+	#sidebar {
+		min-width: 98%;
+	}
+}
