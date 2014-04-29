@@ -39,18 +39,6 @@ body {
 a {
 	color: #3A4145;
 	text-decoration: none;
-
-	/*
-	border-bottom: 1px;
-	border-bottom-color: #BBC7CC;
-	border-bottom-style: solid;
-
-	-o-transition:color 0.3s ease-out;
-	-ms-transition:color 0.3s ease-out;
-	-moz-transition:color 0.3s ease-out;
-	-webkit-transition:color 0.3s ease-out;
-	transition:color 0.3s ease-out;
-	*/
 }
 
 a:hover {
@@ -349,7 +337,7 @@ header {
 
 .author {
 	padding-left: 24px;
-	background-image: url('../images/Author.png');
+	background-image: url('../images/author.png');
 	opacity:0.7;
 	filter:alpha(opacity=70); /* For IE8 and earlier */
 	background-size: 17px;
@@ -360,7 +348,7 @@ header {
 .postedon 
 {
 	padding-left: 24px;
-	background-image: url('../images/PostTime.png');
+	background-image: url('../images/posttime.png');
 	opacity:0.7;
 	filter:alpha(opacity=70); /* For IE8 and earlier */
 	background-size: 14px;
@@ -449,7 +437,7 @@ header {
 
 .post-excerpt-footer-taglabel {
 	background-repeat: no-repeat;
-	background-image: url('../images/Tags.png');
+	background-image: url('../images/tags.png');
 	opacity:0.7;
 	filter:alpha(opacity=70); /* For IE8 and earlier */
 	background-size: 17px;
@@ -528,219 +516,90 @@ header {
  	SOCIAL-BLAH BLAH
 *****************************/
 
-.youtube {
-	width: 64px;
-	height: 64px;
+.social-norm {
 	color:transparent;
 	border:none;
 	display: block;
 	position: relative;
-	background-repeat: no-repeat;
-	background-position: center;
-	-o-transition:0.3s ease-out;
-	-ms-transition: 0.3s ease-out;
-	-moz-transition: 0.3s ease-out;
-	-webkit-transition: 0.3s ease-out;
-	transition: 0.3s ease-out;
-	background-image: url('../images/youtube-color.png');
-	
+}
+
+.social-both,
+.social-both:hover {
+	background: url('../images/social-sprites.png') no-repeat;
+	width: 64px;
+	height: 64px;
+}
+
+.youtube {
+	background-position: -66px -258px ;
 }
 
 .youtube:hover {
-	background-repeat: no-repeat;
-	background-position: center;
-	background-image: url('../images/youtube-grey.png');
+	background-position: -69px -321px;
 }
 
 .skype {
-	width: 64px;
-	height: 64px;
-	color:transparent;
-	border:none;
-	display: block;
-	position: relative;
-	background-repeat: no-repeat;
-	background-position: center;
-	-o-transition:0.3s ease-out;
-	-ms-transition: 0.3s ease-out;
-	-moz-transition: 0.3s ease-out;
-	-webkit-transition: 0.3s ease-out;
-	transition: 0.3s ease-out;
-	background-image: url('../images/skype-color.png');
+	background-position: -1px 0;
 }
 
 .skype:hover {
-	background-repeat: no-repeat;
-	background-position: center;
-	background-image: url('../images/skype-grey.png');
+	background-position: -1px -65px;
 }
 
 .linkedin {
-	width: 64px;
-	height: 64px;
-	color:transparent;
-	border:none;
-	display: block;
-	position: relative;
-	background-repeat: no-repeat;
-	background-position: center;
-	-o-transition:0.3s ease-out;
-	-ms-transition: 0.3s ease-out;
-	-moz-transition: 0.3s ease-out;
-	-webkit-transition: 0.3s ease-out;
-	transition: 0.3s ease-out;
-	background-image: url('../images/linkedin-color.png');
-	
+	background-position: -3px -258px;
 }
 
 .linkedin:hover {
-	background-repeat: no-repeat;
-	background-position: center;
-	background-image: url('../images/linkedin-grey.png');
+	background-position: -5px -323px;
 }
 
 .facebook {
-	width: 64px;
-	height: 64px;
-	color:transparent;
-	border:none;
-	display: block;
-	position: relative;
-	background-repeat: no-repeat;
-	background-position: center;
-	-o-transition:0.3s ease-out;
-	-ms-transition: 0.3s ease-out;
-	-moz-transition: 0.3s ease-out;
-	-webkit-transition: 0.3s ease-out;
-	transition: 0.3s ease-out;
-	background-image: url('../images/facebook-color.png');
-	
+	background-position: -131px -126px ;
 }
 
 .facebook:hover {
-	background-repeat: no-repeat;
-	background-position: center;
-	background-image: url('../images/facebook-grey.png');
+	background-position: -132px -191px ;
 }
 
 .googlep {
-	width: 64px;
-	height: 64px;
-	color:transparent;
-	border:none;
-	display: block;
-	position: relative;
-	background-repeat: no-repeat;
-	background-position: center;
-	-o-transition:0.3s ease-out;
-	-ms-transition: 0.3s ease-out;
-	-moz-transition: 0.3s ease-out;
-	-webkit-transition: 0.3s ease-out;
-	transition: 0.3s ease-out;
-	background-image: url('../images/googlep-color.png');
-	
+	background-position: -65px 0;
 }
 
 .googlep:hover {
-	background-repeat: no-repeat;
-	background-position: center;
-	background-image: url('../images/googlep-grey.png');
+	background-position: -65px -64px ;
 }
 
 .twitter {
-	width: 64px;
-	height: 64px;
-	color:transparent;
-	border:none;
-	display: block;
-	position: relative;
-	background-repeat: no-repeat;
-	background-position: center;
-	-o-transition:0.3s ease-out;
-	-ms-transition: 0.3s ease-out;
-	-moz-transition: 0.3s ease-out;
-	-webkit-transition: 0.3s ease-out;
-	transition: 0.3s ease-out;
-	background-image: url('../images/twitter-color.png');
-	
+	background-position: -131px -255px ;
 }
 
 .twitter:hover {
-	background-repeat: no-repeat;
-	background-position: center;
-	background-image: url('../images/twitter-grey.png');
+	background-position: -132px -319px ;
 }
 
 .github {
-	width: 64px;
-	height: 64px;
-	color:transparent;
-	border:none;
-	display: block;
-	position: relative;
-	background-repeat: no-repeat;
-	background-position: center;
-	-o-transition:0.3s ease-out;
-	-ms-transition: 0.3s ease-out;
-	-moz-transition: 0.3s ease-out;
-	-webkit-transition: 0.3s ease-out;
-	transition: 0.3s ease-out;
-	background-image: url('../images/github-color.png');
-	
+	background-position: -133px -1px ;
 }
 
 .github:hover {
-	background-repeat: no-repeat;
-	background-position: center;
-	background-image: url('../images/github-grey.png');
+	background-position: -132px -64px ;
 }
 
 .tumblr {
-	width: 64px;
-	height: 64px;
-	color:transparent;
-	border:none;
-	display: block;
-	position: relative;
-	background-repeat: no-repeat;
-	background-position: center;
-	-o-transition:0.3s ease-out;
-	-ms-transition: 0.3s ease-out;
-	-moz-transition: 0.3s ease-out;
-	-webkit-transition: 0.3s ease-out;
-	transition: 0.3s ease-out;
-	background-image: url('../images/tumblr-color.png');
-	
+	background-position: -131px -255px ;
 }
 
 .tumblr:hover {
-	background-repeat: no-repeat;
-	background-position: center;
-	background-image: url('../images/tumblr-grey.png');
+	background-position: -132px -319px ;
 }
 
 .rss {
-	width: 64px;
-	height: 64px;
-	color:transparent;
-	border:none;
-	display: block;
-	position: relative;
-	background-repeat: no-repeat;
-	background-position: center;
-	-o-transition:0.3s ease-out;
-	-ms-transition: 0.3s ease-out;
-	-moz-transition: 0.3s ease-out;
-	-webkit-transition: 0.3s ease-out;
-	transition: 0.3s ease-out;
-	background-image: url('../images/rss-color.png');
-	
+	background-position: 0 -127px ;
 }
 
-.rsss:hover {
-	background-repeat: no-repeat;
-	background-position: center;
-	background-image: url('../images/rss-grey.png');
+.rss:hover {
+	background-position: -3px -194px ;
 }
 
 /*****************************
