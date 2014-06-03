@@ -113,9 +113,10 @@ pre code, tt {
 *****************************/
 
 .back-to-top {
+	z-index: 100;
     position: fixed;
-    bottom: 2em;
-    right: 0px;
+    bottom: 4em;
+    left: 0px;
     text-decoration: none;
     color: #fff;
     background-color: #DF5A48;
@@ -415,6 +416,13 @@ header {
 	clear: both;
 }
 
+#add-this {
+	clear: both;
+	text-align: center;
+    margin: 10px 10px 15px 10px;
+    width: 97%;
+}
+
 #profile h2 {
 	font-weight: normal;
 	font-size: 1.50em;
@@ -480,17 +488,17 @@ header {
 }
 
 
-#social {
+.social {
 	margin: 0 auto;
 	width: 100%;
 	text-align: center;
 }
 
-#social ul {
+.social ul {
 	list-style: none;
 }
 
-#social ul li {
+.social ul li {
 	display: inline-block;
 }
 

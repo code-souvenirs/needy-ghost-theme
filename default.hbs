@@ -31,11 +31,9 @@
         <!-- Style for syntax highlighting - Gangnam..oops Github style -->
         <link rel="stylesheet" type="text/css" href="http://yandex.st/highlightjs/8.0/styles/github.min.css">
         <!-- Site wide styles -->
-        <link rel="stylesheet" type="text/css" href="{{asset "/css/main.css"}}" />
+        <link rel="stylesheet" type="text/css" href="{{asset "/css/main.css"}}" media="screen  and (min-width: 1024px)" />
         <!-- Responsive UI styles -->
-        <link rel="stylesheet" type="text/css" href="{{asset "/css/responsive.css"}}" />
-        <!-- Style for tooltip / hit -->
-        <link rel="stylesheet" type="text/css" href="{{asset "/css/hint.css"}}">
+        <link rel="stylesheet" type="text/css" href="{{asset "/css/responsive.css"}}" media="screen and (max-width: 1024px)" />
 
 		{{! Touch icons and favicon }}
 		<!-- TODO: Create this icons to support apple touch devices
@@ -99,18 +97,6 @@
         <script src="//cdn.jsdelivr.net/fitvids/1.1.0/jquery.fitvids.js"></script>
         <!-- Load: Highlight - formatting for code snippets -->
         <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
-        <!-- Load: AddThis - social button script -->
-        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4fa5abe769d71cd7"></script>
-        <script type="text/javascript">
-            addthis.layers({
-                'theme' : 'transparent',
-                'share' : {
-                    'position' : 'left',
-                    'numPreferredServices' : 5
-                },
-                'whatsnext' : {}
-            });
-        </script>
         <!-- Load: Main - site wide script -->
         <script type="text/javascript" src="{{asset "/js/main.js"}}"></script>
         <!-- Initialize: code formatter - Highlight -->
