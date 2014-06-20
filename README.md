@@ -1,27 +1,76 @@
-# Needy Ghost
+Needy Ghost Theme - Ghost Blogging Platform
+===================
 
-Theme created for my [blog](http://blog.jsinh.in).
+![Needy Ghost Theme - Ghost Blogging Platform](https://github.com/jsinh/needy-ghost-sitemap/raw/master/ghost-logo.png "Needy Ghost Theme - Ghost Blogging Platform")
 
-## Copyright & License
+##A simple and needy theme for your ghost blogging platform - really needy !!
+
+---
+
+###About:
+
+I have been a wordpress blogger for quite few years now. I have used all kind of themes, theme frameworks and lots of plugins to keep the blog geared.
+
+Needy ghost theme is developed keeping a wordpress blogger migrating to Ghost blogging platform in mind.
+
+It keeps you typography on top in the list with more or less similar feeling of using a regular wordpress theme -> Header | Footer | Center | Single right sidebar.
+
+---
+
+###Features:
+
+*	Responsive - Adapts the underlying browser dimension and apply page styles accordingly.
+*	Minimal - Content is the king. Keeps the focus on your information, viewed from any device or platform.
+*	Social Icons & Links - part of footer.
+*	HTML5 + CSS3.
+*	SEO friendly.
+*	Loading GIF - visible when a page is loading.
+* 	No charges, feel free to use for your ghost blog.
+*	Huge cover images and background pictures avoided.
+*	Github style - code snippet using Highlight.js.
+*	Article content concentrated - tag / category list display as meta-information.
+*	Back to top link.
+* 	Place-holder for custom menu links (static pages).
+*	Simple color transitions for links.
+* 	Disqus integrated.
+*	Add this - share widget enabled.
+*	Author - name, avatar and about-me per post (once - no repetition).
+*	Supports all newer browsers (specific list and version information comming soon).
+
+---
+
+###Works on:
+
+ *	Developed and testing with Ghost Version - 0.4.2
+
+---
+
+###Release change-log:
+
+**Version - 1.0.4**
+*	Minor bug fixes for responsive style in tag list section.
+
+**Version - 1.0.3**
+*	Responsive layout, first draft release.
+*	Removed my account specific code from HTML, CSS and Javascript.
+
+**Version - 1.0.2**
+*	First, not so ugly draft of theme released.
+
+**Version - 1.0.1 and older**
+*	Damn ugly and noobish, burried deep in my backyard.
+
+---
+
+###Credits:
+
+All the credits goes to [Ghost.org](ghost.org) for providing us with this beautiful blogging platform without any bullshit to deal with.
+
+---
+
+###License
+
+This work is [licensed](https://github.com/jsinh/needy-ghost-theme/raw/master/LICENSE) under:
 
 The MIT License (MIT)
-
-Copyright (c) 2014 Jaspalsinh Chauhan (jsinh.in)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+Copyright (c) 2014 Jaspalsinh Chauhan
