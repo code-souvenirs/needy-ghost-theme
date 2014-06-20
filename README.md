@@ -80,14 +80,14 @@ Also, yes - I have worked on this theme while I sit for hours in toilet and poop
 A programmer promise !!
 Someday I would...
 
-*	Optimize the stylesheet and sweep off silly stuffs.
-*	Use LESS (or SASS) to maintain the theme styles.
-*	Work on responsive UI layout implementation in better way.
-*	Work on improvemnts of HTML elements used to get the most out of HTML5.
-* 	Explore Handlebar, let's see if we can do something interesting or unique.
-*	Modify theme so it would validate HTML5 and CSS validator tests (I found it fails with few errors and warnings).
-*	Bring theme color variants, though orange is not a bad color.
-*	Create a theme customization and user information fill-up wizard application using .NET (don't know what I might endup making).
+- [ ] Optimize the stylesheet and sweep off silly stuffs
+- [ ] Use LESS (or SASS) to maintain the theme styles
+- [ ] Work on responsive UI layout implementation in better way
+- [ ] Work on improvemnts of HTML elements used to get the most out of HTML5
+- [ ] Explore Handlebar, let's see if we can do something interesting or unique
+- [ ] Modify theme so it would validate HTML5 and CSS validator tests (I found it fails with few errors and warnings)
+- [ ] Bring theme color variants, though orange is not a bad color
+- [ ] Create a theme customization and user information fill-up wizard application using .NET (don't know what I might endup making)
 
 ---
 
