@@ -70,7 +70,7 @@ It keeps your typography on top in the list with more or less similar feeling of
 It would make me glad and excited if I see Needy ghost theme as your choice for blog theme.
 Drop a mail with link to your live URL and message if any at {jachauhan} {at} {gmail} {dotcom}.
 
-I would be happy to add theme here !!
+I would be happy to add that information here !!
 
 Currently use by:
 
