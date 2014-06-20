@@ -106,7 +106,7 @@ Currently used by:
 
 ###Credits:
 
-Thank you @JohnONolan and the entire [Ghost.org](ghost.org) team and community for creating and supporting this amazing blogging platform.
+Thank you [@JohnONolan](https://github.com/JohnONolan) and the entire [Ghost.org](ghost.org) team and community for creating and supporting this amazing blogging platform.
 
 ---
 
