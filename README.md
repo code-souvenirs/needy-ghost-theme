@@ -13,29 +13,32 @@ I have been a wordpress blogger for quite few years now. I have used all kind of
 
 Needy ghost theme is developed keeping a wordpress blogger migrating to Ghost blogging platform in mind.
 
-It keeps you typography on top in the list with more or less similar feeling of using a regular wordpress theme -> Header | Footer | Center | Single right sidebar.
+It keeps your typography on top in the list with more or less similar feeling of using a regular wordpress theme -> Header | Footer | Center | Single right sidebar.
 
 ---
 
 ###Features:
 
-*	Responsive - Adapts the underlying browser dimension and apply page styles accordingly.
-*	Minimal - Content is the king. Keeps the focus on your information, viewed from any device or platform.
-*	Social Icons & Links - part of footer.
-*	HTML5 + CSS3.
-*	SEO friendly.
-*	Loading GIF - visible when a page is loading.
-* 	No charges, feel free to use for your ghost blog.
-*	Huge cover images and background pictures avoided.
-*	Github style - code snippet using Highlight.js.
-*	Article content concentrated - tag / category list display as meta-information.
-*	Back to top link.
-* 	Place-holder for custom menu links (static pages).
-*	Simple color transitions for links.
-* 	Disqus integrated.
-*	Add this - share widget enabled.
-*	Author - name, avatar and about-me per post (once - no repetition).
-*	Supports all newer browsers (specific list and version information comming soon).
+*	**Responsive** - Adapts the underlying browser dimension and applies page styles accordingly.
+*	**Minimal** - Content is the king. Keeps the focus on your information, viewed from any device or platform.
+*	**Normalized** using [normalize.js](http://necolas.github.io/normalize.css/).
+*	**[Fitvids.js](http://fitvidsjs.com/)** - fluid width video embeds.
+*	**Smart image resize** - from [Casper theme - Try Ghost](https://github.com/TryGhost/Casper).
+*	**Social Icons & Links** - part of footer.
+*	**HTML5 + CSS3.**
+*	**SEO friendly.**
+*	**Loading GIF** - visible when a page is loading.
+* 	**No charges**, feel free to use for your ghost blog.
+*	**Huge cover images and background pictures avoided.**
+*	**Github style** - code snippet using [highlight.js](http://highlightjs.org/).
+*	**Article content concentrated** - tag / category list display as meta-information.
+*	**Back to top** link.
+* 	**Place-holder for custom menu links** (static pages).
+*	**Simple color transitions** for links.
+* 	**Disqus** integrated.
+*	**AddThis** - share widget enabled.
+*	**Author - name, avatar and about-me** per post (once - no repetition).
+*	**Supports all newer browsers** - specific list and version information comming soon).
 
 ---
 
@@ -59,6 +62,19 @@ It keeps you typography on top in the list with more or less similar feeling of 
 
 **Version - 1.0.1 and older**
 *	Damn ugly and noobish, burried deep in my backyard.
+
+---
+
+###Who is in?
+
+It would make me glad and excited if I see Needy ghost theme as your choice for blog theme.
+Drop a mail with link to your live URL and message if any at {jachauhan} {at} {gmail} {dotcom}.
+
+I would be happy to add theme here !!
+
+Currently use by:
+
+* [Jsinh - Me](http://blog.jsinh.in)
 
 ---
 
