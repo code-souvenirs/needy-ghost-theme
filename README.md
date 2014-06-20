@@ -112,7 +112,7 @@ Thank you @JohnONolan and the entire [Ghost.org](ghost.org) team and community f
 
 ###Author's Request:
 
-Link back to [Jsinh's blog page](http://blog.jsinh.in) or Github repository from your theme instance. Though it is not complusory nor I will run after you with flame sticks and pitchfork.
+Link back to [Jsinh's blog page](http://blog.jsinh.in) or [Github repository](https://github.com/jsinh/needy-ghost-theme) from your theme instance. Though it is not complusory nor I will run after you with flame sticks and pitchfork.
 
 ---
 
@@ -121,7 +121,7 @@ Link back to [Jsinh's blog page](http://blog.jsinh.in) or Github repository from
 Thank you for forking, starring and pulling request for this repository.
 No not hesitate to connect with me and poke for any queries, issues you face or observed or have better suggestions or better way to do somethings I have done.
 
-You can find all possible way to connect with me at my [blog](http://blog.jsinh.in) (ref. footer)
+You can find all possible ways to connect with me at my [blog](http://blog.jsinh.in) (ref. footer)
 
 ---
 
