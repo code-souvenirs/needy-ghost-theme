@@ -9,7 +9,15 @@ Needy Ghost Theme
 
 I have been a wordpress blogger for quite few years now. I have used all kind of themes, theme frameworks and lots of plugins to keep the blog geared. Needy ghost theme is developed keeping a wordpress blogger migrating to Ghost blogging platform in mind.
 
-It keeps your typography on top in the list with more or less similar feeling of using a regular wordpress theme -> Header | Footer | Center | Single right sidebar.
+It keeps your typography on top in the list with more or less similar feeling of using a regular wordpress theme.
+
+Header | Footer | Center | Single right sidebar.
+
+---
+
+###Preview:
+
+ Needy ghost theme is previewed live at [Jsinh's Blog](http://blog.jsinh.in). "Eat your own dog food" theory. This blog will always run the latest version of Ghost (as soon as released) and latest version of this theme.
 
 ---
 
@@ -77,18 +85,20 @@ Someday I would...
 *	Work on responsive UI layout implementation in better way.
 *	Work on improvemnts of HTML elements used to get the most out of HTML5.
 * 	Explore Handlebar, let's see if we can do something interesting or unique.
+*	Modify theme so it would validate HTML5 and CSS validator tests (I found it fails with few errors and warnings).
 *	Bring theme color variants, though orange is not a bad color.
 *	Create a theme customization and user information fill-up wizard application using .NET (don't know what I might endup making).
+
 ---
 
 ###Who is in?
 
-It would make me glad and excited if I see Needy ghost theme as your choice for blog theme.
-Drop a mail with link to your live URL and message if any at {jachauhan} {at} {gmail} {dotcom}.
+It would make me glad and excited if I see Needy ghost theme as your choice for ghost blog theme.
+Drop a mail with link to your live URL and message if any at {jachauhan}{at}{gmail}{dotcom}.
 
 I would be happy to add that information here !!
 
-Currently use by:
+Currently used by:
 
 * [Jsinh - Me](http://blog.jsinh.in)
 
@@ -103,6 +113,15 @@ All the credits goes to [Ghost.org](ghost.org) for providing us with this beauti
 ###Author's Request:
 
 Link back to [Jsinh's blog page](http://blog.jsinh.in) or Github repository from your theme instance. Though it is not complusory nor I will run after you with flame sticks and pitchfork.
+
+---
+
+###Issues and bugs:
+
+Thank you for forking, starring and pulling request for this repository.
+No not hesitate to connect with me and poke for any queries, issues you face or observed or have better suggestions or better way to do somethings I have done.
+
+You can find all possible way to connect with me at my [blog](http://blog.jsinh.in) (ref. footer)
 
 ---
 
