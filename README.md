@@ -1,17 +1,13 @@
-Needy Ghost Theme - Ghost Blogging Platform
+Needy Ghost Theme
 ===================
 
 ![Needy Ghost Theme - Ghost Blogging Platform](https://github.com/jsinh/needy-ghost-sitemap/raw/master/ghost-logo.png "Needy Ghost Theme - Ghost Blogging Platform")
 
-##A simple and needy theme for your ghost blogging platform - really needy !!
-
----
+##Minimal, responsive and needy theme for your ghost blogging platform - really needy !!
 
 ###About:
 
-I have been a wordpress blogger for quite few years now. I have used all kind of themes, theme frameworks and lots of plugins to keep the blog geared.
-
-Needy ghost theme is developed keeping a wordpress blogger migrating to Ghost blogging platform in mind.
+I have been a wordpress blogger for quite few years now. I have used all kind of themes, theme frameworks and lots of plugins to keep the blog geared. Needy ghost theme is developed keeping a wordpress blogger migrating to Ghost blogging platform in mind.
 
 It keeps your typography on top in the list with more or less similar feeling of using a regular wordpress theme -> Header | Footer | Center | Single right sidebar.
 
@@ -44,7 +40,8 @@ It keeps your typography on top in the list with more or less similar feeling of
 
 ###Works on:
 
- *	Developed and testing with Ghost Version - 0.4.2
+ *	Developed and tested with Ghost Version - 0.4.2.
+ 	Having issues with older or other version of ghost? feel free to connect, I would be glad to help.
 
 ---
 
@@ -52,6 +49,7 @@ It keeps your typography on top in the list with more or less similar feeling of
 
 **Version - 1.0.4**
 *	Minor bug fixes for responsive style in tag list section.
+*	Theme gets it first read-me information on github from lazy, crazy developer.
 
 **Version - 1.0.3**
 *	Responsive layout, first draft release.
@@ -63,6 +61,24 @@ It keeps your typography on top in the list with more or less similar feeling of
 **Version - 1.0.1 and older**
 *	Damn ugly and noobish, burried deep in my backyard.
 
+---
+
+###One thing at a time:
+
+To be honest, I am no designer or HTML ninja or CSS guy or javascript man. I manage to drive through these stuffs in slow pace and not shy or embarrased to admit.
+
+Also, yes - I have worked on this theme while I sit for hours in toilet and poop at times. We all do that and I know you are there right now :P
+
+A programmer promise !!
+Someday I would...
+
+*	Optimize the stylesheet and sweep off silly stuffs.
+*	Use LESS (or SASS) to maintain the theme styles.
+*	Work on responsive UI layout implementation in better way.
+*	Work on improvemnts of HTML elements used to get the most out of HTML5.
+* 	Explore Handlebar, let's see if we can do something interesting or unique.
+*	Bring theme color variants, though orange is not a bad color.
+*	Create a theme customization and user information fill-up wizard application using .NET (don't know what I might endup making).
 ---
 
 ###Who is in?
@@ -84,9 +100,17 @@ All the credits goes to [Ghost.org](ghost.org) for providing us with this beauti
 
 ---
 
+###Author's Request:
+
+Link back to [Jsinh's blog page](http://blog.jsinh.in) or Github repository from your theme instance. Though it is not complusory nor I will run after you with flame sticks and pitchfork.
+
+---
+
 ###License
 
 This work is [licensed](https://github.com/jsinh/needy-ghost-theme/raw/master/LICENSE) under:
 
 The MIT License (MIT)
 Copyright (c) 2014 Jaspalsinh Chauhan
+
+Feel free to modify, destroy or rewrite your copy of theme source.
