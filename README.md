@@ -106,7 +106,7 @@ Currently used by:
 
 ###Credits:
 
-All the credits goes to [Ghost.org](ghost.org) for providing us with this beautiful blogging platform without any bullshit to deal with.
+Thank you @JohnONolan and the entire [Ghost.org](ghost.org) team and community for creating and supporting this amazing blogging platform.
 
 ---
 
