@@ -48,7 +48,7 @@ Header | Footer | Center | Single right sidebar.
 
 ###Works on:
 
- *	Developed and tested with Ghost Version - 0.4.2.
+ *	Developed and tested with Ghost Version - v0.5.0.
  	Having issues with older or other version of ghost? feel free to connect, I would be glad to help.
 
 ---
