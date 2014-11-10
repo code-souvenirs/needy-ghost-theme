@@ -1,20 +1,17 @@
 <header>
     <div id="header-left">
         <a href="{{@blog.url}}" title="Home" id="logo">
-        	{{! Blog - logo - change to point at your blog's logo }}
-            <img src="{{asset "/images/logo.png"}}">
-            <h1>{{meta_title}}</h1>
+            <img src="{{@blog.logo}}">
+            <h1>{{@blog.title}}</h1>
         </a>
     </div>
     <div id="header-right">
         <nav>
             <ul>
-            	{{! Create your blog menu here - sample given below }}
-                <!--
-                <li><a href="{{@blog.url}}/page-slug-01">Menu Item 1</a></li>
-                <li><a href="{{@blog.url}}/page-slug-02">Menu Item 2</a></li>
-                <li><a href="{{@blog.url}}/page-slug-03">Menu Item 3</a></li>
-                -->
+                {{! Create your blog menu here - sample given below }}
+                <li><a href="{{@blog.url}}/tools">Barney and Clyde</a></li>
+                <li><a href="{{@blog.url}}/discography">Archive</a></li>
+                <li><a href="{{@blog.url}}/disclaimer">Disclaimer</a></li>
             </ul>
         </nav>
     </div>

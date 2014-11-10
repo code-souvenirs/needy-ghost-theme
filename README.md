@@ -48,12 +48,22 @@ Header | Footer | Center | Single right sidebar.
 
 ###Works on:
 
- *	Developed and tested with Ghost Version - v0.5.1.
+ *	Developed and tested with Ghost Version - v0.5.3.
  	Having issues with older or other version of ghost? feel free to connect, I would be glad to help.
 
 ---
 
 ###Release change-log:
+
+**Version - 1.1**
+*	Fixed Author - Image closing tag missing bug.
+*	Author name on each post will be default link to the author page e.g: blog/authors/<author>.
+*	Page description to use global value - @blog.description.
+*	"Posted on date" date time was previously in "x time ago" format, I didn't enjoyed it so changed it to traditional date & time and I hope you will like this too.
+*	Blog title will use the global value - @blog.title.
+*	Blog logo will use the global value - @blog.logo, previously it was using static logo path.
+*	Removed the static default logo & static default author (my) image / asset.
+*	Updated my Ghost Blog to 0.5.3 and tested the changes with the new version of ghost. *Thumbs up* !!
 
 **Version - 1.0.4**
 *	Minor bug fixes for responsive style in tag list section.
@@ -78,7 +88,7 @@ To be honest, I am no designer or HTML ninja or CSS guy or javascript man. I man
 Also, yes - I have worked on this theme while I sit for hours in toilet and poop at times. We all do that and I know you are there right now :P
 
 A programmer promise !!
-Someday I would...
+Someday I would... someday, may be after years. But yes someday I would...
 
 - [ ] Optimize the stylesheet and sweep off silly stuffs
 - [ ] Use LESS (or SASS) to maintain the theme styles
@@ -87,7 +97,6 @@ Someday I would...
 - [ ] Explore Handlebar, let's see if we can do something interesting or unique
 - [ ] Modify theme so it would validate HTML5 and CSS validator tests (I found it fails with few errors and warnings)
 - [ ] Bring theme color variants, though orange is not a bad color
-- [ ] Create a theme customization and user information fill-up wizard application using .NET (don't know what I might endup making)
 
 ---
 
