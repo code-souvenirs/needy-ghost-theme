@@ -276,6 +276,7 @@ header {
 #content {
 	float: left;
 	max-width: 75%;
+	min-width: 75%;
 	margin: 10px 1% 10px 1%;
 }
 
