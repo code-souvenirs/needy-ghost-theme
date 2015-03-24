@@ -30,8 +30,6 @@
     {{! ------------------------------------- Responsive meta ------------------------------------ }}
     <!-- Responsive UI design meta -->
     <meta name="HandheldFriendly" content="True" />
-    <!-- Responsive UI mobile optimized -->
-    <meta name="MobileOptimized" content="320" />
     <!-- Responsive UI viewport fix -->
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
     {{! ------------------------------------- Responsive meta ------------------------------------ }}
@@ -42,12 +40,8 @@
     <link rel="shortcut icon" href="{{asset "/favicon.ico"}}" type="image/x-icon">
     {{! ---------------------------------------- Favicon ----------------------------------------- }}
 
+    {{! Needy Ghost Theme: Partials - Site wide HEAD CSS }}
     {{> parts-default-head}}
-
-    <!-- Site wide styles -->
-    <link rel="stylesheet" type="text/css" href="{{asset "/css/main.css"}}" media="screen  and (min-width: 1024px)" />
-    <!-- Responsive UI styles -->
-    <link rel="stylesheet" type="text/css" href="{{asset "/css/responsive.css"}}" media="screen and (max-width: 1024px)" />
 
     {{ghost_head}}
 </head>

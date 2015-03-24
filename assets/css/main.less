@@ -1,11 +1,52 @@
-/***************************************************************
-	This style-sheet contains style definitions for elements of
-	the theme.
-***************************************************************/
+// out: main.min.css, sourcemap: true, compress: true
+/*******************************************************************************
+	@Author			Jaspalsinh Chauhan (Jsinh)
+	@Website		http://www.jsinh.in
+	@Last Update	12:10 AM Wednesday, March 25, 2015
 
-/*
-#DF5A48 - Orange color / same as in the bulb logo.
-*/
+	TABLE CONTENTS
+	-------------------------------
+    01. Variables
+		01. Globals
+		02. Wrapper
+		03. Commons
+		04. Headings
+		05. Paragraphs
+		06. Blockquote
+		07. Labels
+		08. Pagination
+		09. Loading GIF
+		10. Header
+		11. Blog
+		12.	Sidebar
+		13.	Footer
+		14. Socials
+		15. Dividers
+		16. Media Elements
+
+*******************************************************************************/
+
+/** 01. Variables
+*******************************************************************************/
+
+/* Color pallete */
+@color-active           : #DF5A48;
+@color-text             : #3A4145;
+@color-hr               : #BBBBBB;
+@color-code-bg          : #EBEBEB;
+@color-code-border      : #E3EDF3;
+@color-white-in-color   : #FFFFFF;
+
+/* Percentage variables */
+@perc-100               : 100%;
+
+/* Font variables */
+@font-default           : 'Open Sans', sans-serif;
+@font-code              : Inconsolata, monospace, sans-serif;
+
+/* Text variables */
+@text-dec-none          : none;
+
 
 /*****************************
 	HTML
@@ -20,28 +61,24 @@ html {
 *****************************/
 body {
 	height: 100%;
-    max-height: 100%;
-
-	line-height: 1.50em;
-	font-size: 1.3em;
-  font-size: 1.4rem;
+  max-height: 100%;
+  font-size: 1.4em;
   line-height: 1.35em;
 	color: #999;
 	background-color: #F2F2F2;
-	font-family: 'Open Sans', sans-serif;
+	font-family: @font-default;
 }
-
 
 /*****************************
  	Anchor - Links
 *****************************/
 a {
-	color: #3A4145;
+	color: @color-text;
 	text-decoration: none;
 }
 
 a:hover {
-	color: #ED702B;
+	color: @color-active;
 }
 
 /*****************************
@@ -58,7 +95,7 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #BBB;
+    border-top: 1px solid @color-hr;
     margin: 1.20em 0.50em 0.50em 0.50em;
     padding: 0;
 }
@@ -69,14 +106,14 @@ hr {
 *****************************/
 
 code, kbd, pre,
-samp { font-family: monospace, serif; }
+samp { font-family: @font-code; }
 
 code, tt {
     padding: 1px 3px;
-    font-family: Inconsolata, monospace, sans-serif;
+    font-family: @font-code;
     white-space: pre-wrap;
-    border: 1px solid #E3EDF3;
-    background: #ebebeb;
+    border: 1px solid @color-code-border;
+    background: @color-code-bg;
     border-radius: 2px;
 }
 
@@ -84,13 +121,13 @@ pre {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin: 1.6em 0;
-    border: 1px solid #E3EDF3;
+    border: 1px solid @color-code-border;
     width: 100%;
     padding: 10px;
-    font-family: Inconsolata, monospace, sans-serif;
+    font-family: @font-code;
     white-space: pre;
     overflow: auto;
-    background: #ebebeb;
+    background: @color-code-bg;
     border-radius: 3px;
 }
 
@@ -104,7 +141,7 @@ pre code, tt {
 }
 
 .hljs {
-	background-color: #ebebeb;
+	background-color: @color-code-bg;
 }
 
 /*****************************
@@ -117,8 +154,8 @@ pre code, tt {
     bottom: 4em;
     left: 0px;
     text-decoration: none;
-    color: #fff;
-    background-color: #DF5A48;
+    color: @color-white-in-color;
+    background-color: @color-active;
     padding: 0.6em;
     display: none;
 }
@@ -213,7 +250,7 @@ header {
 #header-left h1 {
 	float: right;
 	text-rendering: optimizeLegibility;
-	color: #fff;
+	color: @color-white-in-color;
 	font-size: 2.5em;
 	margin: 28px 10px 25px 0px;
 
@@ -225,7 +262,7 @@ header {
 }
 
 #header-left h1:hover {
-	color: #DF5A48;
+	color: @color-active;
 }
 
 
@@ -246,7 +283,7 @@ header {
 }
 
 #header-right nav a {
-	color: #fff;
+	color: @color-white-in-color;
   	font-weight:normal;
   	padding: 0px 20px 0px 0px;
   	text-decoration: none;
@@ -260,7 +297,7 @@ header {
 }
 
 #header-right nav a:hover{
-	 color: #DF5A48;
+	 color: @color-active;
 }
 
 /*****************************
@@ -285,7 +322,7 @@ header {
 	max-width: 16.60%;
 	padding: 0;
 	margin: 10px 1% 10px 1%;
-	background-color: #fff;
+	background-color: @color-white-in-color;
 	border: 1px solid #E9E9E9;
 }
 
@@ -293,7 +330,7 @@ header {
 {
 	padding: 10px;
 	margin-bottom: 20px;
-	background-color: #fff;
+	background-color: @color-white-in-color;
 	border: 1px solid #E9E9E9;
 }
 
@@ -317,7 +354,7 @@ header {
 }
 
 .post-excerpt-header nav a:hover{
-	 color: #DF5A48;
+	 color: @color-active;
 }
 
 .post-excerpt-header h2 {
@@ -359,14 +396,14 @@ header {
 
 .post-excerpt-content {
 	margin: 20px 10px 15px 10px;
-	color: #3A4145;
+	color: @color-text;
 	line-height: 1.50em;
 	font-weight: normal;
 	font-size: 1.10em;
 }
 
 .post-excerpt-content a {
-	color: #3A4145;
+	color: @color-text;
 	border-bottom: 1px;
 	border-bottom-color: #BBC7CC;
 	border-bottom-style: dotted;
@@ -379,11 +416,11 @@ header {
 }
 
 .post-excerpt-content a:hover {
-	color: #DF5A48;
+	color: @color-active;
 }
 
 .keep-reading a {
-	color: #DF5A48;
+	color: @color-active;
 
 	-o-transition:color 0.3s ease-out;
 	-ms-transition:color 0.3s ease-out;
@@ -393,7 +430,7 @@ header {
 }
 
 .keep-reading a:hover {
-	color: #3A4145;
+	color: @color-text;
 }
 
 
@@ -427,7 +464,7 @@ header {
 	font-weight: normal;
 	font-size: 1.50em;
 	margin-bottom: 25px;
-	color: #DF5A48;
+	color: @color-active;
 	display: block;
 }
 
@@ -508,7 +545,7 @@ header {
 }
 
 .inner a {
-	color: #DF5A48;
+	color: @color-active;
 	-o-transition:0.3s ease-out;
 	-ms-transition: 0.3s ease-out;
 	-moz-transition: 0.3s ease-out;
@@ -691,7 +728,7 @@ h6 {
 *****************************/
 /*
 article {
-	background-color: #fff;
+	background-color: @color-white-in-color;
 	border: 1px solid #E9E9E9;
 	margin: 10px;
 }

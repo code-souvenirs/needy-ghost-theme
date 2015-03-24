@@ -12,7 +12,7 @@
         /* Make specific links open in a new window in a HTML5 valid way */
         $('a[rel*="external"]').click(function(){
           $(this).attr('target', '_blank');
-        })
+        });
 
         function casperFullImg() {
             $("img").each( function() {
@@ -25,7 +25,7 @@
                     $(this).removeClass('full-img');
                 }
             });
-        };
+        }
 
         casperFullImg();
         $(window).smartresize(casperFullImg);
@@ -42,7 +42,7 @@
                 jQuery('.back-to-top').fadeOut(duration);
             }
         });
-        
+
         jQuery('.back-to-top').click(function(event) {
             event.preventDefault();
             jQuery('html, body').animate({scrollTop: 0}, duration);
@@ -70,7 +70,7 @@
               if (!execAsap)
                   func.apply(obj, args);
               timeout = null;
-          };
+          }
 
           if (timeout)
               clearTimeout(timeout);
@@ -79,8 +79,8 @@
 
           timeout = setTimeout(delayed, threshold || 100);
       };
-  }
-  // smartresize 
+  };
+  // smartresize
   jQuery.fn[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
 
 })(jQuery,'smartresize');
