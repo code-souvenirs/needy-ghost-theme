@@ -1,3 +1,3 @@
 User-agent: *
 Disallow: /ghost/
-Sitemap: http://example.com/sitemap.xml.gz
+Sitemap: http://blog.jsinh.in/sitemap.xml

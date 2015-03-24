@@ -1,35 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if IE 8]>          <html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>          <html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->  <html><!--<![endif]-->
     <head>
-    	{{! Document settings }}
+        {{! ----------------------------------- Document setting ----------------------------------- }}
         <!-- Encoding used -->
         <meta charset="utf-8" />
         <!-- IE version's standard fix -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        {{! ----------------------------------- Document setting ----------------------------------- }}
 
-        {{! Page meta }}
+        {{! --------------------------------------- Page meta --------------------------------------- }}
         <!-- Page title -->
-        <title>{{meta_title}}</title>
+        {{#is "post, page"}}
+            <title>{{meta_title}} - {{@blog.title}}</title>
+        {{else}}
+            <title>{{meta_title}}</title>
+        {{/is}}
         <!-- Page description -->
-        <meta name="description" content="{{@blog.description}}" />
+        <meta name="description" content="{{meta_description}}"/>
+        <!-- Page Authorship -->
+        <link rel="author" href="https://plus.google.com/+JaspalsinhChauhanthisdotlife"/>
+        <!-- Page keywords -->
+        <meta name="keywords" content="Jsinh,Jaspal,Jachauhan,Jaspalsinh Chauhan,This dot life,_jsinh,jsinh blog,dotnet,.NET,C#,csharp,ASP.NET,ASP.NET MVC,ASP.NET 5,how to,tutorials" />
+        <!-- Page robots -->
+        <meta name="robots" content="index,follow" />
+        {{! --------------------------------------- Page meta --------------------------------------- }}
 
-        {{! Responsive meta }}
+        {{! ------------------------------------- Responsive meta ------------------------------------ }}
         <!-- Responsive UI design meta -->
         <meta name="HandheldFriendly" content="True" />
         <!-- Responsive UI mobile optimized -->
         <meta name="MobileOptimized" content="320" />
         <!-- Responsive UI viewport fix -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+        {{! ------------------------------------- Responsive meta ------------------------------------ }}
 
-        {{! Font settings - Change to use your choice of fonts }}
-		<!-- Google fonts import - Open Sans -->
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,800' rel='stylesheet' type='text/css'>
+        {{! ---------------------------------------- Favicon ----------------------------------------- }}
+        <!-- Favicon -->
+        <link rel="icon" href="{{asset "/favicon.ico"}}" type="image/x-icon">
+        <link rel="shortcut icon" href="{{asset "/favicon.ico"}}" type="image/x-icon">
+        {{! ---------------------------------------- Favicon ----------------------------------------- }}
 
-        {{! Style imports }}
-        <!-- Normalize First -->
-        <link rel="stylesheet" type="text/css" href="{{asset "/css/normalize.css"}}" />
-        <!-- Style for syntax highlighting - Gangnam..oops Github style -->
-        <link rel="stylesheet" type="text/css" href="http://yandex.st/highlightjs/8.0/styles/github.min.css">
+        {{> plugins-header}}
+
         <!-- Site wide styles -->
         <link rel="stylesheet" type="text/css" href="{{asset "/css/main.css"}}" media="screen  and (min-width: 1024px)" />
         <!--[if (lt IE 9)&(!IEMobile)]>
@@ -38,32 +52,17 @@
         <!-- Responsive UI styles -->
         <link rel="stylesheet" type="text/css" href="{{asset "/css/responsive.css"}}" media="screen and (max-width: 1024px)" />
 
-		{{! Touch icons and favicon - Pending implementation }}
-		<!-- TODO: Create this icons to support apple touch devices
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{asset "/images/apple-touch-icon-144x144-precomposed.png"}}" />
-	    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{asset "/images/apple-touch-icon-114x114-precomposed.png"}}" />
-	    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{asset "/images/apple-touch-icon-72x72-precomposed.png"}}" />
-	    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{asset "/images/apple-touch-icon-57x57-precomposed.png"}}" />
-	    <link rel="apple-touch-icon-precomposed" href="{{asset "/images/apple-touch-icon-precomposed.png"}}" />
-	    <link rel="apple-touch-icon" href="{{asset "/images/apple-touch-icon.png"}}" />
-		-->
-        <link rel="icon" href="{{asset "/images/favicon.ico"}}" type="image/x-icon">
-        <link rel="shortcut icon" href="{{asset "/images/favicon.ico"}}" type="image/x-icon">
-
-        {{! Google analytics script - Paste here }}
-
-        {{! Ghost outputs important style and meta data with this tag }}
         {{ghost_head}}
     </head>
     <body class="{{body_class}}">
 
-		{{! Needy Ghost Theme: Partials - Site wide header }}
+        {{! Needy Ghost Theme: Partials - Site wide header }}
         {{> header}}
 
         <div id="body" role="main">
         <div class="loader" role="loader"><div class="loader-icon"></div></div>
             <div id="content">
-    	        {{! Everything else gets inserted here }}
+                {{! Everything else gets inserted here }}
                 {{{body}}}
             </div>
             {{> sidebar}}
@@ -77,14 +76,14 @@
         {{! Needy Ghost Theme: Site wide footer section }}
         <footer id="footer">
 
-        	{{! Needy Ghost Theme: Partials - Social badge integration }}
-        	{{> social-footer}}
+            {{! Needy Ghost Theme: Partials - Social badge integration }}
+            {{> social-footer}}
 
-        	{{! Needy Ghost Theme: Partials - Site wide footer notes }}
-        	{{> footer-notes}}
+            {{! Needy Ghost Theme: Partials - Site wide footer notes }}
+            {{> footer-notes}}
         </footer>
 
-    	{{! Ghost outputs important scripts and data with this tag }}
+        {{! Ghost outputs important scripts and data with this tag }}
         {{ghost_foot}}
 
         {{! Awwaal scripts load here }}
