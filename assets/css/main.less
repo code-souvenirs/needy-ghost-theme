@@ -7,73 +7,86 @@
 	TABLE CONTENTS
 	-------------------------------
     01. Variables
-		01. Globals
-		02. Wrapper
-		03. Commons
-		04. Headings
-		05. Paragraphs
-		06. Blockquote
-		07. Labels
-		08. Pagination
-		09. Loading GIF
-		10. Header
-		11. Blog
-		12.	Sidebar
-		13.	Footer
-		14. Socials
-		15. Dividers
-		16. Media Elements
+		02. Globals
+		03. Code blocks
+		04. Back to top
+    05. Loader
+    06. Pagination
+    07. Header
+    08. Main content
+    09. Sidebar
+    10. Disclaimer
+    11. Footer
+    12. Imports
 
+Note:
+Dimension Order: Top / Right / Bottom / Left
 *******************************************************************************/
 
 /** 01. Variables
 *******************************************************************************/
 
 /* Color pallete */
-@color-active           : #DF5A48;
-@color-text             : #3A4145;
-@color-hr               : #BBBBBB;
-@color-code-bg          : #EBEBEB;
-@color-code-border      : #E3EDF3;
-@color-white-in-color   : #FFFFFF;
+@color-active                       : #DF5A48;
+@color-text                         : #3A4145;
+@color-hr                           : #BBBBBB;
+@color-code-bg                      : #EBEBEB;
+@color-code-border                  : #E3EDF3;
+@color-white                        : #FFFFFF;
+@color-black                        : #000000;
+@color-head-foot-bg                 : #363636;
+@color-head-foot-border             : #424141;
+@color-content-border               : #E9E9E9;
+@color-post-excerpt-border-bottom   : #BBC7CC;
+@color-body-bg                      : #F2F2F2;
+@color-back-to-top-hover-bg         : rgba(135, 135, 135, 0.50);
 
 /* Percentage variables */
-@perc-100               : 100%;
+@perc-100                           : 100%;
 
 /* Font variables */
-@font-default           : 'Open Sans', sans-serif;
-@font-code              : Inconsolata, monospace, sans-serif;
+@font-default                       : 'Open Sans', sans-serif;
+@font-code                          : Inconsolata, monospace, sans-serif;
 
 /* Text variables */
-@text-dec-none          : none;
+@text-dec-none                      : none;
 
+/** 02. Globals
+*******************************************************************************/
 
-/*****************************
-	HTML
-*****************************/
+/* HTML */
 html {
     height: 100%;
     max-height: 100%;
 }
 
-/*****************************
-	BODY
-*****************************/
+/* Body */
 body {
-	height: 100%;
+  height: 100%;
   max-height: 100%;
   font-size: 1.4em;
   line-height: 1.35em;
-	color: #999;
-	background-color: #F2F2F2;
-	font-family: @font-default;
+  font-family: @font-default;
+	background-color: @color-body-bg;
 }
 
-/*****************************
- 	Anchor - Links
-*****************************/
-a {
-	color: @color-text;
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  line-height: 1;
+  text-rendering: optimizeLegibility;
+}
+
+h1 { font-size: 1.80em; }
+h2 { font-size: 1.60em; }
+h3 { font-size: 1.45em; }
+h4 { font-size: 1.30em; }
+h5 { font-size: 1.15em; }
+h6 { font-size: 1.00em; }
+
+/* Links */
+a, a:hover, a:visited, a:active {
+  color: @color-text;
 	text-decoration: none;
 }
 
@@ -81,127 +94,125 @@ a:hover {
 	color: @color-active;
 }
 
-/*****************************
- 	Images
-*****************************/
+/* Images */
 img {
 	max-width: 100%;
 }
 
-/*****************************
- 	Horizontal ruler
-*****************************/
+/* Horizontal Ruler */
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid @color-hr;
-    margin: 1.20em 0.50em 0.50em 0.50em;
-    padding: 0;
+  border: 0;
+  padding: 0;
+  height: 1px;
+  display: block;
+  border-top: 1px solid @color-hr;
+  margin: 0.50em;
 }
 
+/* Blockquote */
+blockquote {
+  border:0px;
+	padding-left: 1.3em;
+  position: relative;
+	text-indent: 12px;
+  text-decoration: none;
+  font-style: italic;
+}
 
-/*****************************
- 	Inline code
-*****************************/
+/* Blockquote using Font-Awesome */
+blockquote:before {
+  position:absolute;
+  font-family: FontAwesome;
+  top: 4px;
+  left:-5px;
+  font-style: normal;
+  font-size: 1.2em;
+  content: "\f10d";
+}
 
-code, kbd, pre,
-samp { font-family: @font-code; }
+/** 03. Code blocks
+*******************************************************************************/
+
+code, kbd, pre, samp {
+  font-family: @font-code;
+}
 
 code, tt {
-    padding: 1px 3px;
-    font-family: @font-code;
-    white-space: pre-wrap;
-    border: 1px solid @color-code-border;
-    background: @color-code-bg;
-    border-radius: 2px;
+  padding: 1px 3px;
+  border-radius: 2px;
+  white-space: pre-wrap;
+  font-family: @font-code;
+  background: @color-code-bg;
+  border: 1px solid @color-code-border;
 }
 
 pre {
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 1.6em 0;
-    border: 1px solid @color-code-border;
-    width: 100%;
-    padding: 10px;
-    font-family: @font-code;
-    white-space: pre;
-    overflow: auto;
-    background: @color-code-bg;
-    border-radius: 3px;
+  width: 100%;
+  padding: 10px;
+  overflow: auto;
+  margin: 1.6em 0;
+  white-space: pre;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-family: @font-code;
+  background: @color-code-bg;
+  -moz-box-sizing: border-box;
+  border: 1px solid @color-code-border;
 }
 
 pre code, tt {
-    font-size: inherit;
-    white-space: -moz-pre-wrap;
-    white-space: pre-wrap;
-    background: transparent;
-    border: none;
-    padding: 0;
+  font-size: inherit;
+  white-space: -moz-pre-wrap;
+  white-space: pre-wrap;
+  background: transparent;
+  border: none;
+  padding: 0;
 }
 
 .hljs {
 	background-color: @color-code-bg;
 }
 
-/*****************************
- 	BACK TO TOP
-*****************************/
+/** 04. Back to top
+*******************************************************************************/
 
 .back-to-top {
 	z-index: 100;
-    position: fixed;
-    bottom: 4em;
-    left: 0px;
-    text-decoration: none;
-    color: @color-white-in-color;
-    background-color: @color-active;
-    padding: 0.6em;
-    display: none;
+  position: fixed;
+  bottom: 4em;
+  left: 0px;
+  text-decoration: none;
+  color: @color-white;
+  background-color: @color-active;
+  padding: 0.6em;
+  display: none;
 }
 
 .back-to-top:hover {
-    background-color: rgba(135, 135, 135, 0.50);
+  background-color: @color-back-to-top-hover-bg;
 }
 
-/*****************************
- 	Blockquote
-*****************************/
-blockquote {
-	margin: 2em 10px;
-	padding-left: 1.5em;
-	position: relative;
-	background-image: url('../images/blockquote.png');
-	opacity:0.7;
-	filter:alpha(opacity=70); /* For IE8 and earlier */
-	background-size: 1.50em;
-	background-position: left top;
-	background-repeat: no-repeat;
-	text-indent: 23px;
-}
+/** 05. Loader
+*******************************************************************************/
 
-/*****************************
- 	Loader
-*****************************/
 .loader {
-    display: block;
-    position: fixed;
-    z-index: 100;
-    top: 22px;
-    right: -moz-calc(50%);
-    right: -webkit-calc(50%);
-    right: calc(50%);
+  display: block;
+  position: fixed;
+  z-index: 100;
+  top: 22px;
+  right: -moz-calc(50%);
+  right: -webkit-calc(50%);
+  right: calc(50%);
 }
 
 .loader-icon {
-    width: 32px;
-    height: 32px;
-    background-image: url('../images/ajax-loader.gif');
+  width: 32px;
+  height: 32px;
+  background-image: url('../images/ajax-loader.gif');
 }
 
-/*****************************
- 	PAGINATION
-*****************************/
+/** 06. Pagination
+*******************************************************************************/
 
 .pagination {
     padding-top: .5em;
@@ -213,17 +224,16 @@ blockquote {
     float: left;
 }
 
-/*****************************
- 	HEADER - SECTION
-*****************************/
+/** 07. Header
+*******************************************************************************/
 
 header {
 	float: left;
 	margin: -10px 0 30px 0;
 	padding: 5px 0 0 0;
 	width: 100%;
-	background: #363636;
-	border-color: #424141;
+	background: @color-head-foot-bg;
+	border-color: @color-head-foot-border;
 }
 
 #header-left {
@@ -250,7 +260,7 @@ header {
 #header-left h1 {
 	float: right;
 	text-rendering: optimizeLegibility;
-	color: @color-white-in-color;
+	color: @color-white;
 	font-size: 2.5em;
 	margin: 28px 10px 25px 0px;
 
@@ -283,7 +293,7 @@ header {
 }
 
 #header-right nav a {
-	color: @color-white-in-color;
+	color: @color-white;
   	font-weight:normal;
   	padding: 0px 20px 0px 0px;
   	text-decoration: none;
@@ -300,9 +310,9 @@ header {
 	 color: @color-active;
 }
 
-/*****************************
- 	BODY - SECTION
-*****************************/
+/** 08. Main content
+*******************************************************************************/
+
 #body {
 	margin: 0 auto;
 	max-width: 1200px;
@@ -322,16 +332,16 @@ header {
 	max-width: 16.60%;
 	padding: 0;
 	margin: 10px 1% 10px 1%;
-	background-color: @color-white-in-color;
-	border: 1px solid #E9E9E9;
+	background-color: @color-white;
+	border: 1px solid @color-content-border;
 }
 
 #content article
 {
 	padding: 10px;
 	margin-bottom: 20px;
-	background-color: @color-white-in-color;
-	border: 1px solid #E9E9E9;
+	background-color: @color-white;
+	border: 1px solid @color-content-border;
 }
 
 .post-excerpt-header {
@@ -344,8 +354,7 @@ header {
 
 .post-excerpt-header a {
 	text-decoration: none;
-  	border:none;
-
+  border:none;
 	-o-transition:color 0.3s ease-out;
 	-ms-transition:color 0.3s ease-out;
 	-moz-transition:color 0.3s ease-out;
@@ -355,6 +364,7 @@ header {
 
 .post-excerpt-header nav a:hover{
 	 color: @color-active;
+   background-color: @color-body-bg;
 }
 
 .post-excerpt-header h2 {
@@ -405,7 +415,7 @@ header {
 .post-excerpt-content a {
 	color: @color-text;
 	border-bottom: 1px;
-	border-bottom-color: #BBC7CC;
+	border-bottom-color: @color-post-excerpt-border-bottom;
 	border-bottom-style: dotted;
 
 	-o-transition:color 0.3s ease-out;
@@ -417,11 +427,11 @@ header {
 
 .post-excerpt-content a:hover {
 	color: @color-active;
+  background-color: @color-body-bg;
 }
 
 .keep-reading a {
 	color: @color-active;
-
 	-o-transition:color 0.3s ease-out;
 	-ms-transition:color 0.3s ease-out;
 	-moz-transition:color 0.3s ease-out;
@@ -432,7 +442,6 @@ header {
 .keep-reading a:hover {
 	color: @color-text;
 }
-
 
 #profile{
 	clear: both;
@@ -490,9 +499,8 @@ header {
 	padding-left: 24px;
 }
 
-/*****************************
- 	SIDEBAR
-*****************************/
+/** 09. Sidebar
+*******************************************************************************/
 
 #sidebar-adsense {
 	width: 165px;
@@ -500,28 +508,26 @@ header {
 	margin: 25px auto;
 }
 
-/*****************************
- 	EMPLOYER-DISCLAIMER
-*****************************/
+/** 10. Disclaimer
+*******************************************************************************/
 
 #bitches-please {
 	float: left;
 	width: 100%;
 	margin: 0 auto 10px;
 	text-align: center;
-	color: #000;
+	color: @color-black;
 }
 
-/*****************************
- 	FOOTER
-*****************************/
+/** 11. Footer
+*******************************************************************************/
 
 #footer {
 	float: left;
 	padding: 5px 0 10px 0;
 	width: 100%;
 	margin: 0 auto;
-	background: #363636;
+	background: @color-head-foot-bg ;
 }
 
 
@@ -541,7 +547,7 @@ header {
 
 .inner {
 	text-align: center;
-	color: #F2F2F2;
+	color: @color-body-bg;
 }
 
 .inner a {
@@ -554,140 +560,12 @@ header {
 }
 
 .inner a:hover {
-	color: #F2F2F2;
+	color: @color-body-bg;
 }
 
-/*****************************
- 	SOCIAL-BLAH BLAH
-*****************************/
-
-.social-norm {
-	color:transparent;
-	border:none;
-	display: block;
-	position: relative;
-}
-
-.social-both,
-.social-both:hover {
-	background: url('../images/social-sprites.png') no-repeat;
-	width: 64px;
-	height: 64px;
-}
-
-.youtube {
-	background-position: -66px -258px ;
-}
-
-.youtube:hover {
-	background-position: -69px -321px;
-}
-
-.skype {
-	background-position: -1px 0;
-}
-
-.skype:hover {
-	background-position: -1px -65px;
-}
-
-.linkedin {
-	background-position: -3px -258px;
-}
-
-.linkedin:hover {
-	background-position: -5px -323px;
-}
-
-.facebook {
-	background-position: -131px -126px ;
-}
-
-.facebook:hover {
-	background-position: -132px -191px ;
-}
-
-.googlep {
-	background-position: -65px 0;
-}
-
-.googlep:hover {
-	background-position: -65px -64px ;
-}
-
-.twitter {
-	background-position: -131px -255px ;
-}
-
-.twitter:hover {
-	background-position: -132px -319px ;
-}
-
-.github {
-	background-position: -133px -1px ;
-}
-
-.github:hover {
-	background-position: -132px -64px ;
-}
-
-.tumblr {
-	background-position: -131px -255px ;
-}
-
-.tumblr:hover {
-	background-position: -132px -319px ;
-}
-
-.rss {
-	background-position: 0 -127px ;
-}
-
-.rss:hover {
-	background-position: -3px -194px ;
-}
-
-/*****************************
- 	H1, H2, H3, H4, H5, H6
-*****************************/
-
-h1, h2, h3,
-h4, h5, h6 {
-    text-rendering: optimizeLegibility;
-    line-height: 1;
-    margin-top: 0;
-}
-
-h1 {
-    font-size: 2em;
-	font-weight: normal;
-}
-
-h2 {
-    font-size: 1.80em;
-	font-weight: normal;
-}
-
-h3 {
-    font-size: 1.60em;
-    font-weight: normal;
-}
-
-h4 {
-    font-size: 1.45rem;
-    font-weight: normal;
-}
-
-h5 {
-    font-size: 1.30rem;
-    font-weight: normal;
-}
-
-h6 {
-    font-size: 1.10rem;
-    font-weight: normal;
-}
-
+/** 12. Imports
+*******************************************************************************/
+@import "social-icons.less";
 
 /*****************************
  	HEADING
@@ -699,7 +577,7 @@ h6 {
 	margin: 0 0 30px 0;
 	padding: 5px 0 0 0;
 	width: 100%;
-	background-color: #363636;
+	background-color: @color-head-foot-bg ;
 }
 
 #wrapper ul li {
@@ -728,8 +606,8 @@ h6 {
 *****************************/
 /*
 article {
-	background-color: @color-white-in-color;
-	border: 1px solid #E9E9E9;
+	background-color: @color-white;
+	border: 1px solid @color-content-border;
 	margin: 10px;
 }
 */
