@@ -11,10 +11,11 @@
     Dimension Order: Top / Right / Bottom / Left
 *******************************************************************************/
 
-@media screen and (max-width: 320px) {
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
 
   /** 01. Header - Media query - Min 320px
   *****************************************************************************/
+
   #hdr-logo-title {
     float: none;
   }
@@ -25,12 +26,12 @@
 
   #hdr-logo {
     float: none;
-    width: 2.80em;
+    width: 2.9em;
     margin: 0 auto;
   }
 
   #hdr-logo-title a img {
-  	width: 2.70em;
+    width: 2.8em;
     margin: 10px 0 10px 0;
   }
 
@@ -40,7 +41,7 @@
   }
 
   #hdr-logo-title a span {
-  	font-size: 1.90em;
+    font-size: 2.2em;
   }
 
   #hdr-navigation {
@@ -49,21 +50,22 @@
   }
 
   #hdr-navigation nav {
-  	text-align:center;
-  	margin: 10px 0 0 0;
-  	font-size: 1.00em;
+    text-align:center;
+
+    font-size: 1em;
   }
 
   #hdr-navigation nav ul {
     padding: 0;
+    margin: 0;
   }
 
   #hdr-navigation nav li {
-  	display: block;
-    margin: 5px 0 5px 0;
+    display: block;
+    margin: 3px 0 3px 0;
   }
 
   #hdr-navigation nav ul li a {
-  	padding: 0;
+    padding: 0;
   }
 }

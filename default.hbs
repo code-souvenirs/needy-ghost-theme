@@ -50,9 +50,16 @@
     {{> parts-default-analytics}}
 </head>
 <body class="{{body_class}}">
-  {{! Needy Ghost Theme: Partials - Site wide header }}
-  {{> parts-header}}
-  
+  <div id="wrapper">
+    {{! Needy Ghost Theme: Partials - Site wide header }}
+    {{> parts-header}}
+
+    {{! Everything else gets inserted here }}
+    {{{body}}}
+
+    {{! Needy Ghost Theme: Partials - Site wide footer }}
+    {{> parts-footer}}
+  </div>
   {{! Ghost outputs important scripts and data with this tag }}
   {{ghost_foot}}
 

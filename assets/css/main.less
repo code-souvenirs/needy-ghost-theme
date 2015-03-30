@@ -61,6 +61,9 @@ html {
 
 /* Body */
 body {
+  margin: 0;
+  padding: 0;
+  min-width: 200px;
   height: 100%;
   max-height: 100%;
   font-size: 1.4em;
@@ -206,6 +209,27 @@ pre code, tt {
   text-decoration: none;
 }
 
+/** 05. Wrapper
+*******************************************************************************/
+#wrapper {
+  min-height: 100%;
+  position: relative;
+}
+
+header {
+  overflow: hidden;
+	background: @color-head-foot-bg;
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: @color-body-bg;
+  background: @color-head-foot-bg;
+}
+
 /** 05. Back to top
 *******************************************************************************/
 /*
@@ -260,13 +284,13 @@ pre code, tt {
 /** 08. Header
 *******************************************************************************/
 
-header {
-  overflow:hidden;
-	background: @color-head-foot-bg;
-}
-
 #hdr-logo-title {
 	float: left;
+}
+
+#hdr-logo {
+  float: left;
+
 }
 
 #hdr-logo-title a {
@@ -275,21 +299,23 @@ header {
 }
 
 #hdr-logo-title a img {
-	width: 3em;
+	width: 3.00em;
   border: none;
-  display: inline-block;
+  margin: 20px 10px 20px 30px;
   vertical-align:middle;
   display: table-cell;
 }
 
+#hdr-title {
+  float: left;
+  margin: 22px 0 20px 0;
+}
+
 #hdr-logo-title a span {
-	font-size: 2.5em;
-  margin-top: 0;
+	font-size: 2.50em;
   line-height: 1;
-  display: inline-block;
   vertical-align:middle;
   display: table-cell;
-  text-rendering: optimizeLegibility;
 }
 
 #hdr-navigation {
@@ -298,12 +324,13 @@ header {
 
 #hdr-navigation nav {
 	text-align:right;
-	margin: 35px 0 0 0;
+	margin: 0;
 	font-size: 1.20em;
 }
 
 #hdr-navigation nav ul {
 	list-style: none;
+  margin: 32px 20px 18px 0;
 }
 
 #hdr-navigation nav li {
@@ -573,3 +600,5 @@ header {
 *******************************************************************************/
 @import "social-icons";
 @import "mq-min320";
+@import "mq-min480";
+@import "mq-min768";
