@@ -1,0 +1,11 @@
+<div id="hdr-navigation">
+  {{#if @blog.navigation}}
+    <nav>
+        <ul>
+          {{#foreach @blog.navigation}}
+            <li role="presentation"><a class="link-white-to-theme-active" href="{{url absolute="true"}}">{{label}}</a></li>
+          {{/foreach}}
+        </ul>
+    </nav>
+  {{/if}}
+</div>

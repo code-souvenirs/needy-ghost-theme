@@ -43,41 +43,20 @@
     {{! Needy Ghost Theme: Partials - Site wide HEAD CSS }}
     {{> parts-default-head}}
 
+    {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_head}}
+
+    {{! Needy Ghost Theme: Partials - Added google analytics script }}
+    {{> parts-default-analytics}}
 </head>
 <body class="{{body_class}}">
+  {{! Needy Ghost Theme: Partials - Site wide header }}
+  {{> parts-header}}
+  
+  {{! Ghost outputs important scripts and data with this tag }}
+  {{ghost_foot}}
 
-    {{! Needy Ghost Theme: Partials - Site wide header }}
-    {{> header}}
-
-    <div id="body" role="main">
-    <div class="loader" role="loader"><div class="loader-icon"></div></div>
-        <div id="content">
-            {{! Everything else gets inserted here }}
-            {{{body}}}
-        </div>
-        {{> sidebar}}
-    </div>
-
-    <a href="#" class="back-to-top">Back to Top</a>
-
-    {{! Needy Ghost Theme: Site wide disclaimer }}
-    {{> disclaimer}}
-
-    {{! Needy Ghost Theme: Site wide footer section }}
-    <footer id="footer">
-
-        {{! Needy Ghost Theme: Partials - Social badge integration }}
-        {{> social-footer}}
-
-        {{! Needy Ghost Theme: Partials - Site wide footer notes }}
-        {{> footer-notes}}
-    </footer>
-
-    {{! Ghost outputs important scripts and data with this tag }}
-    {{ghost_foot}}
-
-    {{! Load all plugin and site scripts }}
-    {{> parts-default-js}}
+  {{! Load all plugin and site scripts }}
+  {{> parts-default-js}}
 </body>
 </html>

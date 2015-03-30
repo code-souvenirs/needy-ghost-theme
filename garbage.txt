@@ -1,0 +1,134 @@
+from main.less
+
+
+/*****************************
+ 	HEADING
+*****************************/
+
+/*
+
+#header-wrapper {
+	margin: 0 0 30px 0;
+	padding: 5px 0 0 0;
+	width: 100%;
+	background-color: @color-head-foot-bg ;
+}
+
+#wrapper ul li {
+	text-decoration: none;
+} */
+
+/*.content-wrapper {
+	width: 100%;
+}
+
+.content
+{
+	margin 0 auto;
+	max-width: 990px;
+}*/
+
+/*****************************
+ 	NAVIGATION
+*****************************/
+/*
+
+*/
+
+/*****************************
+ 	ARTICLE
+*****************************/
+/*
+article {
+	background-color: @color-body-bg;
+	border: 1px solid @color-content-border;
+	margin: 10px;
+}
+*/
+
+
+
+
+
+
+
+
+
+from HBS files
+
+
+
+
+
+
+
+
+
+
+
+{{#foreach posts}}
+<article>
+    <header class="post-excerpt-header">
+        <h2><a href="{{url}}" title="Read &quot;{{title}}&quot;">{{title}}</a></h2>
+        <hr />
+        {{! Needy Ghost Theme: Post wide meta information - Author, Published time }}
+        {{> post-meta}}
+    </header>
+    <section class="post-excerpt-content">
+        <p>{{excerpt characters="350"}}&hellip;<span class="keep-reading"><a href="{{url}}" title="Read &quot;{{title}}&quot;">keep reading</a></span></p>
+    </section>
+    <footer class="post-excerpt-footer">
+        {{! Needy Ghost Theme: Post wide tags }}
+        {{#if tags}}
+            <span class="post-excerpt-footer-taglabel">{{tags}}</span>
+        {{/if}}
+    </footer>
+</article>
+{{/foreach}}
+
+{{! Pagination }}
+{{#if pagination.prev}}
+    {{pagination}}
+{{else}}
+    {{#if pagination.next}}
+        {{pagination}}
+    {{/if}}
+{{/if}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="body" role="main">
+<div class="loader" role="loader"><div class="loader-icon"></div></div>
+    <div id="content">
+        {{! Everything else gets inserted here }}
+        {{{body}}}
+    </div>
+    {{> sidebar}}
+</div>
+
+<a href="#" class="back-to-top">Back to Top</a>
+
+{{! Needy Ghost Theme: Site wide disclaimer }}
+{{> disclaimer}}
+
+{{! Needy Ghost Theme: Site wide footer section }}
+<footer id="footer">
+
+    {{! Needy Ghost Theme: Partials - Social badge integration }}
+    {{> social-footer}}
+
+    {{! Needy Ghost Theme: Partials - Site wide footer notes }}
+    {{> footer-notes}}
+</footer>

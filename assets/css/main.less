@@ -9,15 +9,16 @@
     01. Variables
 		02. Globals
 		03. Code blocks
-		04. Back to top
-    05. Loader
-    06. Pagination
-    07. Header
-    08. Main content
-    09. Sidebar
-    10. Disclaimer
-    11. Footer
-    12. Imports
+    04. Hyperlink common styles
+		05. Back to top
+    06. Loader
+    07. Pagination
+    08. Header
+    09. Main content
+    10. Sidebar
+    11. Disclaimer
+    12. Footer
+    13. Imports
 
 Note:
 Dimension Order: Top / Right / Bottom / Left
@@ -32,10 +33,8 @@ Dimension Order: Top / Right / Bottom / Left
 @color-hr                           : #BBBBBB;
 @color-code-bg                      : #EBEBEB;
 @color-code-border                  : #E3EDF3;
-@color-white                        : #FFFFFF;
 @color-black                        : #000000;
 @color-head-foot-bg                 : #363636;
-@color-head-foot-border             : #424141;
 @color-content-border               : #E9E9E9;
 @color-post-excerpt-border-bottom   : #BBC7CC;
 @color-body-bg                      : #F2F2F2;
@@ -85,14 +84,7 @@ h5 { font-size: 1.15em; }
 h6 { font-size: 1.00em; }
 
 /* Links */
-a, a:hover, a:visited, a:active {
-  color: @color-text;
-	text-decoration: none;
-}
 
-a:hover {
-	color: @color-active;
-}
 
 /* Images */
 img {
@@ -173,16 +165,52 @@ pre code, tt {
 	background-color: @color-code-bg;
 }
 
-/** 04. Back to top
+/** 04. Hyperlink common styles
 *******************************************************************************/
+.link-black-to-theme-active {
+  color: @color-text;
+	text-decoration: none;
 
+  transition:color 0.3s ease-out;
+	-o-transition:color 0.3s ease-out;
+	-ms-transition:color 0.3s ease-out;
+	-moz-transition:color 0.3s ease-out;
+	-webkit-transition:color 0.3s ease-out;
+  text-rendering: optimizeLegibility;
+}
+
+.link-black-to-theme-active:hover {
+	color: @color-active;
+  text-decoration: none;
+}
+
+.link-white-to-theme-active {
+  color: @color-body-bg;
+	text-decoration: none;
+
+  transition:color 0.3s ease-out;
+	-o-transition:color 0.3s ease-out;
+	-ms-transition:color 0.3s ease-out;
+	-moz-transition:color 0.3s ease-out;
+	-webkit-transition:color 0.3s ease-out;
+  text-rendering: optimizeLegibility;
+}
+
+.link-white-to-theme-active:hover {
+	color: @color-active;
+  text-decoration: none;
+}
+
+/** 05. Back to top
+*******************************************************************************/
+/*
 .back-to-top {
 	z-index: 100;
   position: fixed;
   bottom: 4em;
   left: 0px;
   text-decoration: none;
-  color: @color-white;
+  color: @color-body-bg;
   background-color: @color-active;
   padding: 0.6em;
   display: none;
@@ -190,9 +218,9 @@ pre code, tt {
 
 .back-to-top:hover {
   background-color: @color-back-to-top-hover-bg;
-}
+}*/
 
-/** 05. Loader
+/** 06. Loader
 *******************************************************************************/
 
 .loader {
@@ -211,10 +239,10 @@ pre code, tt {
   background-image: url('../images/ajax-loader.gif');
 }
 
-/** 06. Pagination
+/** 07. Pagination
 *******************************************************************************/
 
-.pagination {
+/*.pagination {
     padding-top: .5em;
 }
 .pagination .older-posts {
@@ -222,97 +250,67 @@ pre code, tt {
 }
 .pagination .newer-posts {
     float: left;
-}
+}*/
 
-/** 07. Header
+/** 08. Header
 *******************************************************************************/
 
 header {
-	float: left;
-	margin: -10px 0 30px 0;
-	padding: 5px 0 0 0;
-	width: 100%;
+  overflow:hidden;
 	background: @color-head-foot-bg;
-	border-color: @color-head-foot-border;
 }
 
-#header-left {
+#hdr-logo-title {
 	float: left;
 }
 
-#header-right {
-	float: right;
+#hdr-logo-title a {
+  text-decoration: none;
+  display: table;
 }
 
-#header-left a {
-	text-align: center;
-	margin: 0;
-	text-decoration: none;
-	border: none;
-}
-
-#header-left img {
-	float: left;
+#hdr-logo-title a img {
 	width: 3em;
-	margin: 25px 10px 25px 40px;
+  border: none;
+  display: inline-block;
+  vertical-align:middle;
+  display: table-cell;
 }
 
-#header-left h1 {
-	float: right;
-	text-rendering: optimizeLegibility;
-	color: @color-white;
+#hdr-logo-title a h2 {
 	font-size: 2.5em;
-	margin: 28px 10px 25px 0px;
-
-	-o-transition:color 0.3s ease-out;
-	-ms-transition:color 0.3s ease-out;
-	-moz-transition:color 0.3s ease-out;
-	-webkit-transition:color 0.3s ease-out;
-	transition:color 0.3s ease-out;
+  display: inline-block;
+  vertical-align:middle;
+  display: table-cell;
 }
 
-#header-left h1:hover {
-	color: @color-active;
+#hdr-navigation {
+  overflow:hidden;
 }
 
-
-#header-right nav {
-  	text-align:center;
-  	margin: 35px 0 0 0;
-  	font-size: 1.10em;
+#hdr-navigation nav {
+	text-align:right;
+	margin: 35px 0 0 0;
+	font-size: 1.20em;
 }
 
-#header-right nav ul {
-  	list-style: none;
-  	margin: 0 10px;
-  	padding: 0;
+#hdr-navigation nav ul {
+	list-style: none;
 }
 
-#header-right nav li {
-  	display: inline-block;
+#hdr-navigation nav li {
+	display: inline-block;
 }
 
-#header-right nav a {
-	color: @color-white;
-  	font-weight:normal;
-  	padding: 0px 20px 0px 0px;
-  	text-decoration: none;
-  	border:none;
-
-	-o-transition:color 0.3s ease-out;
-	-ms-transition:color 0.3s ease-out;
-	-moz-transition:color 0.3s ease-out;
-	-webkit-transition:color 0.3s ease-out;
-	transition:color 0.3s ease-out;
+#hdr-navigation nav ul li a {
+	font-weight:normal;
+	padding: 0px 20px 0px 0px;
+	border:none;
 }
 
-#header-right nav a:hover{
-	 color: @color-active;
-}
-
-/** 08. Main content
+/** 09. Main content
 *******************************************************************************/
-
+/*
 #body {
 	margin: 0 auto;
 	max-width: 1200px;
@@ -332,7 +330,7 @@ header {
 	max-width: 16.60%;
 	padding: 0;
 	margin: 10px 1% 10px 1%;
-	background-color: @color-white;
+	background-color: @color-body-bg;
 	border: 1px solid @color-content-border;
 }
 
@@ -340,7 +338,7 @@ header {
 {
 	padding: 10px;
 	margin-bottom: 20px;
-	background-color: @color-white;
+	background-color: @color-body-bg;
 	border: 1px solid @color-content-border;
 }
 
@@ -388,7 +386,7 @@ header {
 	background-image: url('../images/author.png');
 	opacity:0.7;
 	filter:alpha(opacity=70); /* For IE8 and earlier */
-	background-size: 17px;
+	/*background-size: 17px;
 	background-position:  left;
 	background-repeat: no-repeat;
 }
@@ -399,7 +397,7 @@ header {
 	background-image: url('../images/posttime.png');
 	opacity:0.7;
 	filter:alpha(opacity=70); /* For IE8 and earlier */
-	background-size: 14px;
+	/*background-size: 14px;
 	background-position:  left;
 	background-repeat: no-repeat;
 }
@@ -494,24 +492,24 @@ header {
 	background-image: url('../images/tags.png');
 	opacity:0.7;
 	filter:alpha(opacity=70); /* For IE8 and earlier */
-	background-size: 17px;
+	/*background-size: 17px;
 	background-position: left;
 	padding-left: 24px;
 }
 
-/** 09. Sidebar
+/** 10. Sidebar
 *******************************************************************************/
 
-#sidebar-adsense {
+/*#sidebar-adsense {
 	width: 165px;
 	height: 605px;
 	margin: 25px auto;
 }
 
-/** 10. Disclaimer
+/** 11. Disclaimer
 *******************************************************************************/
 
-#bitches-please {
+/*#bitches-please {
 	float: left;
 	width: 100%;
 	margin: 0 auto 10px;
@@ -519,10 +517,10 @@ header {
 	color: @color-black;
 }
 
-/** 11. Footer
+/** 12. Footer
 *******************************************************************************/
 
-#footer {
+/*#footer {
 	float: left;
 	padding: 5px 0 10px 0;
 	width: 100%;
@@ -563,51 +561,7 @@ header {
 	color: @color-body-bg;
 }
 
-/** 12. Imports
+/** 13. Imports
 *******************************************************************************/
-@import "social-icons.less";
-
-/*****************************
- 	HEADING
-*****************************/
-
-/*
-
-#header-wrapper {
-	margin: 0 0 30px 0;
-	padding: 5px 0 0 0;
-	width: 100%;
-	background-color: @color-head-foot-bg ;
-}
-
-#wrapper ul li {
-	text-decoration: none;
-} */
-
-/*.content-wrapper {
-	width: 100%;
-}
-
-.content
-{
-	margin 0 auto;
-	max-width: 990px;
-}*/
-
-/*****************************
- 	NAVIGATION
-*****************************/
-/*
-
-*/
-
-/*****************************
- 	ARTICLE
-*****************************/
-/*
-article {
-	background-color: @color-white;
-	border: 1px solid @color-content-border;
-	margin: 10px;
-}
-*/
+@import "social-icons";
+@import "mq-min320";
