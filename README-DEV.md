@@ -10,3 +10,4 @@
 * Linter ([linter](https://atom.io/packages/linter))
 * Linter Less ([linter-less](https://atom.io/packages/linter-less))
 * Auto-complete Plus ([autocomplete-plus](https://atom.io/packages/autocomplete-plus))
+* Atom Color Highlight ([atom-color-highlight](https://atom.io/packages/atom-color-highlight))

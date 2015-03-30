@@ -77,14 +77,7 @@
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
 
-    {{! Awwaal scripts load here }}
-    <!-- Load: FitVids - making videos responsive -->
-    <script src="//cdn.jsdelivr.net/fitvids/1.1.0/jquery.fitvids.js"></script>
-    <!-- Load: Highlight - formatting for code snippets -->
-    <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
-    <!-- Load: Main - site wide script -->
-    <script type="text/javascript" src="{{asset "/js/main.js"}}"></script>
-    <!-- Initialize: code formatter - Highlight -->
-    <script>hljs.initHighlightingOnLoad();</script>
+    {{! Load all plugin and site scripts }}
+    {{> parts-default-js}}
 </body>
 </html>
