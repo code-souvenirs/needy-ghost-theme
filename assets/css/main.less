@@ -264,8 +264,12 @@ pre code, tt {
 /** 07. Header / Content / Footer
 *******************************************************************************/
 header {
-  width: 100%;
   background: @color-head-foot-bg;
+}
+
+.content {
+  margin: 0;
+  padding: 0;
 }
 
 .content-row {
@@ -290,10 +294,17 @@ header {
 .content-inner-column {
   margin: 0;
   padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.footer-wrapper {
+  /* Issue# If there is nothing in {{body}} the footer won't
+  stick to bottom (this will be used to experiment for this bug)*/
 }
 
 footer {
-  width: 100%;
   color: @color-body-bg;
   background: @color-head-foot-bg;
 }
