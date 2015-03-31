@@ -10,11 +10,11 @@
 		02. Globals
 		03. Code blocks
     04. Hyperlink common styles
-		05. Back to top
-    06. Loader
-    07. Pagination
+    05. Loader
+    06. Back to top
+    07. Header / Content / Footer
     08. Header
-    09. Main content
+    09. Blog content
     10. Sidebar
     11. Disclaimer
     12. Footer
@@ -56,16 +56,16 @@ Dimension Order: Top / Right / Bottom / Left
 /* HTML */
 html {
     height: 100%;
-    max-height: 100%;
+    width: 100%;
 }
 
 /* Body */
 body {
   margin: 0;
   padding: 0;
-  min-width: 200px;
   height: 100%;
-  max-height: 100%;
+  width: 100%;
+  min-width: 200px;
   font-size: 1.4em;
   line-height: 1.35em;
   font-family: @font-default;
@@ -223,31 +223,82 @@ pre code, tt {
   text-decoration: none;
 }
 
-/** 05. Wrapper - Header / Content / Footer
+/** 05. Loader
 *******************************************************************************/
-#wrapper {
-  min-height: 100%;
-  position: relative;
+
+.loader {
+  display: block;
+  position: fixed;
+  z-index: 100;
+  top: 22px;
+  right: -moz-calc(50%);
+  right: -webkit-calc(50%);
+  right: calc(50%);
 }
 
+.loader-icon {
+  width: 32px;
+  height: 32px;
+  background-image: url('../images/ajax-loader.gif');
+}
+
+/** 06. Back to top
+*******************************************************************************/
+
+.back-to-top {
+	z-index: 100;
+  position: fixed;
+  bottom: 4em;
+  left: 0px;
+  text-decoration: none;
+  color: @color-body-bg;
+  background-color: @color-active;
+  padding: 0.6em;
+  display: none;
+}
+
+.back-to-top:hover {
+  background-color: @color-back-to-top-hover-bg;
+}
+
+/** 07. Header / Content / Footer
+*******************************************************************************/
 header {
-  overflow: hidden;
-	background: @color-head-foot-bg;
+  width: 100%;
+  background: @color-head-foot-bg;
 }
 
-.footer-wrapper {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+.content-row {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: table-row;
+}
+
+.content-inner-row {
+  margin: 0;
+  padding: 0;
+}
+
+.content-column {
+  padding: 0;
+  margin: 0;
+  float: none;
+  display: table-cell;
+}
+
+.content-inner-column {
+  margin: 0;
+  padding: 0;
 }
 
 footer {
+  width: 100%;
   color: @color-body-bg;
   background: @color-head-foot-bg;
 }
 
-/** 06. Header
+/** 08. Header
 *******************************************************************************/
 
 #hdr-logo-title {
@@ -308,36 +359,46 @@ footer {
 	border:none;
 }
 
-/** 07. Main content
+/** 09. Blog content
 *******************************************************************************/
-#content-wrapper {
-  padding: 20px 5px 0 15px;
+
+#blog-content
+{
+  margin: 20px 20px 20px 10px;
+  background-color: @color-body-bg;
+  border: 1px solid @color-content-border;
 }
 
-#content {
-	padding: 0;
-	margin: 0;
-	background-color: @color-body-bg;
-	border: 1px solid @color-content-border;
-}
-
-/** 08. Sidebar
+/** 10. Sidebar
 *******************************************************************************/
 #sidebar {
-	min-width: 220px;
-	padding: 0;
-  margin: 20px 10px 0 5px;
-	background-color: @color-body-bg;
-	border: 1px solid @color-content-border;
+	width: 205px;
+  margin: 20px 0 20px 0;
+  background-color: @color-body-bg;
+  border: 1px solid @color-content-border;
 }
 
-/*#sidebar-adsense {
+#sidebar-adsense {
 	width: 165px;
 	height: 605px;
 	margin: 25px auto;
 }
 
-/** 09. Disclaimer
+.sidebar-outer-container {
+	width: 220px;
+	padding: 20px 0 20px 0;
+	text-align: center;
+}
+
+.sidebar-space-top {
+	margin: 20px 0 0 0;
+}
+
+.sidebar-space-bottom {
+	margin: 0 0 20px 0;
+}
+
+/** 11. Disclaimer
 *******************************************************************************/
 
 #disclaimer {
@@ -345,23 +406,8 @@ footer {
 	margin: 0 auto 10px;
 }
 
-/** 10. Footer
+/** 12. Footer
 *******************************************************************************/
-
-.social {
-  margin: 15px 0 0 0;
-	text-align: center;
-}
-
-.social ul {
-  margin: 0;
-  padding: 0;
-	list-style: none;
-}
-
-.social ul li {
-	display: inline-block;
-}
 
 .credits {
   text-align: center;
@@ -373,58 +419,7 @@ footer {
   margin: 0 0 10px 0;
 }
 
-/** 11. Back to top
-*******************************************************************************/
-/*
-.back-to-top {
-	z-index: 100;
-  position: fixed;
-  bottom: 4em;
-  left: 0px;
-  text-decoration: none;
-  color: @color-body-bg;
-  background-color: @color-active;
-  padding: 0.6em;
-  display: none;
-}
-
-.back-to-top:hover {
-  background-color: @color-back-to-top-hover-bg;
-}*/
-
-/** 12. Loader
-*******************************************************************************/
-
-.loader {
-  display: block;
-  position: fixed;
-  z-index: 100;
-  top: 22px;
-  right: -moz-calc(50%);
-  right: -webkit-calc(50%);
-  right: calc(50%);
-}
-
-.loader-icon {
-  width: 32px;
-  height: 32px;
-  background-image: url('../images/ajax-loader.gif');
-}
-
-/** 13. Pagination
-*******************************************************************************/
-
-/*.pagination {
-    padding-top: .5em;
-}
-.pagination .older-posts {
-    float: right;
-}
-.pagination .newer-posts {
-    float: left;
-}*/
-
-/** 14. Imports
+/** 13. Imports
 *******************************************************************************/
 @import "social-icons";
 @import "mq-min320";

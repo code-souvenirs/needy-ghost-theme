@@ -1,13 +1,19 @@
 <header>
-  <div id="hdr-logo-title">
-      <a href="{{@blog.url}}" title="Go to - '{{@blog.title}}' - Home" class="link-white-to-theme-active">
-          <div id="hdr-logo">
-            <img src="{{@blog.logo}}">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="column col-md-12">
+            <div id="hdr-logo-title">
+                <a href="{{@blog.url}}" title="Go to - '{{@blog.title}}' - Home" class="link-white-to-theme-active">
+                    <div id="hdr-logo">
+                      <img src="{{@blog.logo}}">
+                    </div>
+                    <div id="hdr-title">
+                      <span>{{@blog.title}}</span>
+                    </div>
+                </a>
+            </div>
+            {{> navigation}}
           </div>
-          <div id="hdr-title">
-            <span>{{@blog.title}}</span>
-          </div>
-      </a>
+      </div>
   </div>
-  {{> navigation}}
 </header>

@@ -50,16 +50,25 @@
     {{> analytics}}
 </head>
 <body class="{{body_class}}">
-  <div id="wrapper">
-    {{! Needy Ghost Theme: Partials - Site wide header }}
-    {{> header}}
 
-    {{! Everything else gets inserted here }}
-    {{> content}}
+  {{! Needy Ghost Theme: Partials - Loading GIF }}
+  {{> loader}}
 
-    {{! Needy Ghost Theme: Partials - Site wide footer }}
-    {{> footer}}
-  </div>
+  {{! Needy Ghost Theme: Partials - Back to top link }}
+  {{> back-to-top}}
+
+  {{! Needy Ghost Theme: Partials - Site wide header }}
+  {{> header}}
+
+  {{! Needy Ghost Theme: Partials - Content - Index, Post, Page, Tags, Author etc. }}
+  {{> content}}
+
+  {{! Needy Ghost Theme: Partials - Site wide disclaimer }}
+  {{> disclaimer}}
+
+  {{! Needy Ghost Theme: Partials - Site wide footer }}
+  {{> footer}}
+
   {{! Ghost outputs important scripts and data with this tag }}
   {{ghost_foot}}
 
