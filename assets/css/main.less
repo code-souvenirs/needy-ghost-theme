@@ -231,6 +231,7 @@ pre code, tt {
 }
 
 header {
+  position: relative;
   overflow: hidden;
 	background: @color-head-foot-bg;
 }
@@ -243,6 +244,7 @@ header {
 }
 
 footer {
+  position: relative;
   color: @color-body-bg;
   background: @color-head-foot-bg;
 }
@@ -310,195 +312,26 @@ footer {
 
 /** 07. Main content
 *******************************************************************************/
-/*
-#body {
-	margin: 0 auto;
-	max-width: 1200px;
-	clear:both;
+#content-wrapper {
+  padding: 20px 5px 0 15px;
 }
 
 #content {
-	float: left;
-	max-width: 75%;
-	min-width: 75%;
-	margin: 10px 1% 10px 1%;
-}
-
-#sidebar {
-	float: left;
-	min-width: 200px;
-	max-width: 16.60%;
 	padding: 0;
-	margin: 10px 1% 10px 1%;
-	background-color: @color-body-bg;
-	border: 1px solid @color-content-border;
-}
-
-#content article
-{
-	padding: 10px;
-	margin-bottom: 20px;
-	background-color: @color-body-bg;
-	border: 1px solid @color-content-border;
-}
-
-.post-excerpt-header {
-	float:none;
-	background: none;
 	margin: 0;
-	padding: 0;
-	width: 100%;
-}
-
-.post-excerpt-header a {
-	text-decoration: none;
-  border:none;
-	-o-transition:color 0.3s ease-out;
-	-ms-transition:color 0.3s ease-out;
-	-moz-transition:color 0.3s ease-out;
-	-webkit-transition:color 0.3s ease-out;
-	transition:color 0.3s ease-out;
-}
-
-.post-excerpt-header nav a:hover{
-	 color: @color-active;
-   background-color: @color-body-bg;
-}
-
-.post-excerpt-header h2 {
-	font-weight: normal;
-	font-size: 2em;
-	margin: 15px 0 5px 10px;
-	padding: 0;
-}
-
-.post-metainfo {
-	margin: 5px 0 5px 10px;
-}
-
-.post-excerpt-header time {
-	font-size: 1em;
-	margin: 0 0 0 20px;
-}
-
-.author {
-	padding-left: 24px;
-	background-image: url('../images/author.png');
-	opacity:0.7;
-	filter:alpha(opacity=70); /* For IE8 and earlier */
-	/*background-size: 17px;
-	background-position:  left;
-	background-repeat: no-repeat;
-}
-
-.postedon
-{
-	padding-left: 24px;
-	background-image: url('../images/posttime.png');
-	opacity:0.7;
-	filter:alpha(opacity=70); /* For IE8 and earlier */
-	/*background-size: 14px;
-	background-position:  left;
-	background-repeat: no-repeat;
-}
-
-.post-excerpt-content {
-	margin: 20px 10px 15px 10px;
-	color: @color-text;
-	line-height: 1.50em;
-	font-weight: normal;
-	font-size: 1.10em;
-}
-
-.post-excerpt-content a {
-	color: @color-text;
-	border-bottom: 1px;
-	border-bottom-color: @color-post-excerpt-border-bottom;
-	border-bottom-style: dotted;
-
-	-o-transition:color 0.3s ease-out;
-	-ms-transition:color 0.3s ease-out;
-	-moz-transition:color 0.3s ease-out;
-	-webkit-transition:color 0.3s ease-out;
-	transition:color 0.3s ease-out;
-}
-
-.post-excerpt-content a:hover {
-	color: @color-active;
-  background-color: @color-body-bg;
-}
-
-.keep-reading a {
-	color: @color-active;
-	-o-transition:color 0.3s ease-out;
-	-ms-transition:color 0.3s ease-out;
-	-moz-transition:color 0.3s ease-out;
-	-webkit-transition:color 0.3s ease-out;
-	transition:color 0.3s ease-out;
-}
-
-.keep-reading a:hover {
-	color: @color-text;
-}
-
-#profile{
-	clear: both;
-	float: left;
-	text-align: center;
-}
-
-#about-me-text {
-	float: left;
-	max-width: 700px;
-	margin-left: 20px;
-	margin-top: 10px;
-	margin-bottom: 25px;
-	font-size: 1.10em;
-}
-
-#tag-cloud {
-	clear: both;
-}
-
-#add-this {
-	clear: both;
-	text-align: center;
-    margin: 10px 10px 15px 10px;
-    width: 97%;
-}
-
-#profile h2 {
-	font-weight: normal;
-	font-size: 1.50em;
-	margin-bottom: 25px;
-	color: @color-active;
-	display: block;
-}
-
-.profile-photo {
-	display: block;
-	max-width: 100px;
-	margin: 10px;
-	border-radius: 100%;
-}
-
-.post-excerpt-footer {
-	margin: 0 0 10px 10px;
-	font-size: 0.85em;
-}
-
-.post-excerpt-footer-taglabel {
-	background-repeat: no-repeat;
-	background-image: url('../images/tags.png');
-	opacity:0.7;
-	filter:alpha(opacity=70); /* For IE8 and earlier */
-	/*background-size: 17px;
-	background-position: left;
-	padding-left: 24px;
+	background-color: @color-body-bg;
+	border: 1px solid @color-content-border;
 }
 
 /** 08. Sidebar
 *******************************************************************************/
+#sidebar {
+	min-width: 220px;
+	padding: 0;
+  margin: 20px 10px 0 5px;
+	background-color: @color-body-bg;
+	border: 1px solid @color-content-border;
+}
 
 /*#sidebar-adsense {
 	width: 165px;

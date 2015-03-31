@@ -1,6 +1,36 @@
-/**
- * Contains all site wide scripts
- */
+/*******************************************************************************
+	@Author			Jaspalsinh Chauhan (Jsinh)
+	@Website		http://www.jsinh.in
+	@Last Update	12:10 AM Wednesday, March 25, 2015
+
+	TABLE CONTENTS
+	-------------------------------
+    01. Variables
+		02. Globals
+		03. Code blocks
+    04. Hyperlink common styles
+		05. Back to top
+    06. Loader
+    07. Pagination
+    08. Header
+    09. Main content
+    10. Sidebar
+    11. Disclaimer
+    12. Footer
+    13. Imports
+
+*******************************************************************************/
+
+/* Init */
+jQuery(window).ready(function () {
+	NeedyGhost();
+});
+
+function NeedyGhost() {
+
+  /* Apply FIT-VIDS responsiveness */
+  $(".post-content").fitVids();
+}
 
 (function ($) {
     "use strict";
