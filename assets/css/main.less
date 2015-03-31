@@ -91,9 +91,6 @@ h4 { font-size: 1.45em; }
 h5 { font-size: 1.30em; }
 h6 { font-size: 1.15em; }
 
-/* Links */
-
-
 /* Images */
 img {
 	max-width: 100%;
@@ -209,7 +206,24 @@ pre code, tt {
   text-decoration: none;
 }
 
-/** 05. Wrapper
+.link-theme-active-to-white {
+  color: @color-active;
+	text-decoration: none;
+
+  transition:color 0.3s ease-out;
+	-o-transition:color 0.3s ease-out;
+	-ms-transition:color 0.3s ease-out;
+	-moz-transition:color 0.3s ease-out;
+	-webkit-transition:color 0.3s ease-out;
+  text-rendering: optimizeLegibility;
+}
+
+.link-theme-active-to-white:hover {
+	color: @color-body-bg;
+  text-decoration: none;
+}
+
+/** 05. Wrapper - Header / Content / Footer
 *******************************************************************************/
 #wrapper {
   min-height: 100%;
@@ -230,58 +244,7 @@ footer {
   background: @color-head-foot-bg;
 }
 
-/** 05. Back to top
-*******************************************************************************/
-/*
-.back-to-top {
-	z-index: 100;
-  position: fixed;
-  bottom: 4em;
-  left: 0px;
-  text-decoration: none;
-  color: @color-body-bg;
-  background-color: @color-active;
-  padding: 0.6em;
-  display: none;
-}
-
-.back-to-top:hover {
-  background-color: @color-back-to-top-hover-bg;
-}*/
-
-/** 06. Loader
-*******************************************************************************/
-
-.loader {
-  display: block;
-  position: fixed;
-  z-index: 100;
-  top: 22px;
-  right: -moz-calc(50%);
-  right: -webkit-calc(50%);
-  right: calc(50%);
-}
-
-.loader-icon {
-  width: 32px;
-  height: 32px;
-  background-image: url('../images/ajax-loader.gif');
-}
-
-/** 07. Pagination
-*******************************************************************************/
-
-/*.pagination {
-    padding-top: .5em;
-}
-.pagination .older-posts {
-    float: right;
-}
-.pagination .newer-posts {
-    float: left;
-}*/
-
-/** 08. Header
+/** 06. Header
 *******************************************************************************/
 
 #hdr-logo-title {
@@ -290,7 +253,6 @@ footer {
 
 #hdr-logo {
   float: left;
-
 }
 
 #hdr-logo-title a {
@@ -343,7 +305,7 @@ footer {
 	border:none;
 }
 
-/** 09. Main content
+/** 07. Main content
 *******************************************************************************/
 /*
 #body {
@@ -532,7 +494,7 @@ footer {
 	padding-left: 24px;
 }
 
-/** 10. Sidebar
+/** 08. Sidebar
 *******************************************************************************/
 
 /*#sidebar-adsense {
@@ -541,10 +503,10 @@ footer {
 	margin: 25px auto;
 }
 
-/** 11. Disclaimer
+/** 09. Disclaimer
 *******************************************************************************/
 
-/*#bitches-please {
+#bitches-please {
 	float: left;
 	width: 100%;
 	margin: 0 auto 10px;
@@ -552,25 +514,17 @@ footer {
 	color: @color-black;
 }
 
-/** 12. Footer
+/** 10. Footer
 *******************************************************************************/
 
-/*#footer {
-	float: left;
-	padding: 5px 0 10px 0;
-	width: 100%;
-	margin: 0 auto;
-	background: @color-head-foot-bg ;
-}
-
-
 .social {
-	margin: 0 auto;
-	width: 100%;
+  margin: 15px 0 0 0;
 	text-align: center;
 }
 
 .social ul {
+  margin: 0;
+  padding: 0;
 	list-style: none;
 }
 
@@ -578,25 +532,68 @@ footer {
 	display: inline-block;
 }
 
-.inner {
-	text-align: center;
-	color: @color-body-bg;
+.credits {
+  text-align: center;
+  margin: 10px 0 10px 0;
 }
 
-.inner a {
-	color: @color-active;
-	-o-transition:0.3s ease-out;
-	-ms-transition: 0.3s ease-out;
-	-moz-transition: 0.3s ease-out;
-	-webkit-transition: 0.3s ease-out;
-	transition: 0.3s ease-out;
+.copyright {
+  text-align: center;
+  margin: 0 0 10px 0;
 }
 
-.inner a:hover {
-	color: @color-body-bg;
+/** 11. Back to top
+*******************************************************************************/
+/*
+.back-to-top {
+	z-index: 100;
+  position: fixed;
+  bottom: 4em;
+  left: 0px;
+  text-decoration: none;
+  color: @color-body-bg;
+  background-color: @color-active;
+  padding: 0.6em;
+  display: none;
 }
 
-/** 13. Imports
+.back-to-top:hover {
+  background-color: @color-back-to-top-hover-bg;
+}*/
+
+/** 12. Loader
+*******************************************************************************/
+
+.loader {
+  display: block;
+  position: fixed;
+  z-index: 100;
+  top: 22px;
+  right: -moz-calc(50%);
+  right: -webkit-calc(50%);
+  right: calc(50%);
+}
+
+.loader-icon {
+  width: 32px;
+  height: 32px;
+  background-image: url('../images/ajax-loader.gif');
+}
+
+/** 13. Pagination
+*******************************************************************************/
+
+/*.pagination {
+    padding-top: .5em;
+}
+.pagination .older-posts {
+    float: right;
+}
+.pagination .newer-posts {
+    float: left;
+}*/
+
+/** 14. Imports
 *******************************************************************************/
 @import "social-icons";
 @import "mq-min320";
