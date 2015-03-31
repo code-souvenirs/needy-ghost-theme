@@ -41,29 +41,29 @@
     {{! ---------------------------------------- Favicon ----------------------------------------- }}
 
     {{! Needy Ghost Theme: Partials - Site wide HEAD CSS }}
-    {{> parts-default-head}}
+    {{> load-css}}
 
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_head}}
 
     {{! Needy Ghost Theme: Partials - Added google analytics script }}
-    {{> parts-default-analytics}}
+    {{> analytics}}
 </head>
 <body class="{{body_class}}">
   <div id="wrapper">
     {{! Needy Ghost Theme: Partials - Site wide header }}
-    {{> parts-header}}
+    {{> header}}
 
     {{! Everything else gets inserted here }}
     {{{body}}}
 
     {{! Needy Ghost Theme: Partials - Site wide footer }}
-    {{> parts-footer}}
+    {{> footer}}
   </div>
   {{! Ghost outputs important scripts and data with this tag }}
   {{ghost_foot}}
 
   {{! Load all plugin and site scripts }}
-  {{> parts-default-js}}
+  {{> load-js}}
 </body>
 </html>
