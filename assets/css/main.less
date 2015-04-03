@@ -223,6 +223,23 @@ pre code, tt {
   text-decoration: none;
 }
 
+.link-theme-active-to-black {
+  color: @color-active;
+	text-decoration: none;
+
+  transition:color 0.3s ease-out;
+	-o-transition:color 0.3s ease-out;
+	-ms-transition:color 0.3s ease-out;
+	-moz-transition:color 0.3s ease-out;
+	-webkit-transition:color 0.3s ease-out;
+  text-rendering: optimizeLegibility;
+}
+
+.link-theme-active-to-black:hover {
+	color: @color-text;
+  text-decoration: none;
+}
+
 /** 05. Loader
 *******************************************************************************/
 
@@ -259,6 +276,20 @@ pre code, tt {
 
 .back-to-top:hover {
   background-color: @color-back-to-top-hover-bg;
+}
+
+/** 07. Common styles
+*******************************************************************************/
+
+.wrapword {
+  white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  white-space: pre-wrap;       /* css-3 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  white-space: -webkit-pre-wrap; /* Newer versions of Chrome/Safari*/
+  word-break: break-all;
+  white-space: normal;
 }
 
 /** 07. Header / Content / Footer
@@ -378,6 +409,15 @@ pre code, tt {
   margin: 20px 20px 20px 10px;
   background-color: @color-body-bg;
   border: 1px solid @color-content-border;
+}
+
+/** 09. Blog Post List
+*******************************************************************************/
+
+.post-list-item-header {
+}
+
+.post-list-item-title {
 }
 
 /** 10. Sidebar
