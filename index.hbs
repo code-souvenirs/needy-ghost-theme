@@ -1,2 +1,17 @@
 {{!< default}}
-Test data<br/>
+{{#foreach posts}}
+<article class="post-list-item {{post_class}}">
+    <header class="post-list-item-header">
+        <h2 class="post-list-item-title"><a href="{{url}}">{{{title}}}</a></h2>
+    </header>
+    <section class="post-list-item-excerpt">
+        <p>{{excerpt words="380"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
+    </section>
+    <footer class="post-meta">
+        {{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="Author image" nopin="nopin" />{{/if}}
+        {{author}}
+        {{tags prefix=" on "}}
+        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+    </footer>
+</article>
+{{/foreach}}
