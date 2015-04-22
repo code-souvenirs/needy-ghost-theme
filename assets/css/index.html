@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+  <![endif]-->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<!-- Add Below Custome Jquery and CSS   -->
+<script>
+  $(function() {
+    var footerHT = $("#footer").outerHeight();
+    $('.wrapper').css({'padding-bottom':((footerHT)-0)+'px'});
+    $(window).resize(function() {
+      $('.wrapper').css({'padding-bottom':((footerHT)-0)+'px'});
+    });
+  });
+</script>
+<style>
+  html, body {
+    height:100%;
+  }
+
+  .wrapper {
+    position: relative;
+    min-height:100%;
+  }
+
+  #footer {
+    background: #f2f2f2;
+    text-align:center;
+    padding:5px 0;
+    position:absolute;
+    bottom:0;
+    width:100%;
+  }
+
+  .blog-list a, .blog-list p, .blog-list {
+    word-wrap:break-word;
+  }
+
+  @media screen and ( min-width: 768px) {
+    .navbar-brand {
+      float: none;
+      margin-top:10px;
+      display:inline-block;
+    }
+
+    .navbar-header, .navbar-nav {
+      float: none;
+    }
+
+    .nav > li {
+      display: inline-block;
+      float: none;
+    }
+  }
+</style>
+</head>
+
+<body>
+	<div class="wrapper"> <!-- Footer Should be under Of this class -->
+	   <div class="container-fluid">
+       <div class="row clearfix">
+         <div class="col-md-12 ">
+           <div class="row">
+             <nav class="navbar navbar-default" role="navigation">
+               <div class="navbar-header text-center">
+                 <!-- Mobile Menu Button - Hide in Web and Tablet View -->
+                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                   <span class="sr-only">Toggle navigation</span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                 </button>
+                 <!-- Your Logo image or text here in this Anchor(a) Tag   -->
+                 <a class="navbar-brand" href="#">My Logo</a>
+               </div>
+               <div class="collapse navbar-collapse text-center" id="bs-example-navbar-collapse-1">
+                 <ul class="nav navbar-nav">
+                   <li class="active">
+                     <a href="#">Menu 1</a>
+                   </li>
+                   <li>
+                     <a href="#">Menu 2</a>
+                   </li>
+                   <li>
+                     <a href="#">Menu 3</a>
+                   </li>
+                 </ul>
+               </div>
+             </nav>
+           </div>
+         </div>
+         <div class="col-lg-10 col-sm-9 col-xs-12 blog-list">
+           <h2>Blog List</h2>
+         </div>
+         <!-- Hide In Small Device after Tablet View -->
+         <div class="col-lg-2 col-sm-3 hidden-xs ">
+           <h2>Right Side</h2>
+         </div>
+       </div>
+     </div>
+     <div id="footer" class=" ">
+       <p>Some Text Here</p>
+       <ul class="list-inline list-unstyled ">
+         <li><a href="#">FB</a></li>
+         <li><a href="#">TW</a></li>
+         <li><a href="#">Insta</a></li>
+         <li><a href="#">FB</a></li>
+         <li><a href="#">TW</a></li>
+         <li><a href="#">Insta</a></li>
+         <li><a href="#">FB</a></li>
+         <li><a href="#">TW</a></li>
+         <li><a href="#">Insta</a></li>
+       </ul>
+       <p>Copyright Text here</p>
+     </div>
+   </div>
+ </body>
+</html>

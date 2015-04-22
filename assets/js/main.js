@@ -22,6 +22,13 @@ jQuery(window).ready(function () {
 /* 02. Needy-Ghost main function call
 *******************************************************************************/
 function NeedyGhost() {
+
+	var footerHT = $("#footer").outerHeight();
+  $('.wrapper').css({'padding-bottom':((footerHT)-0)+'px'});
+  $(window).resize(function() {
+    $('.wrapper').css({'padding-bottom':((footerHT)-0)+'px'});
+  });
+
 	ApplyLoader();
 	ApplyFitVids();
 	ApplyBackToTop();

@@ -1,19 +1,25 @@
-<header class="default-header">
-  <div class="container-fluid">
-      <div class="row">
-          <div class="column col-md-12">
-            <div id="hdr-logo-title">
-                <a href="{{@blog.url}}" title="Go to - '{{@blog.title}}' - Home" class="link-white-to-theme-active">
-                    <div id="hdr-logo">
-                      <img src="{{@blog.logo}}">
-                    </div>
-                    <div id="hdr-title">
-                      <span>{{@blog.title}}</span>
-                    </div>
-                </a>
-            </div>
-            {{> navigation}}
-          </div>
-      </div>
-  </div>
-</header>
+<div class="col-md-12 ">
+ <div class="row">
+   <nav class="navbar navbar-default" role="navigation">
+     <div class="navbar-header text-center">
+       <!-- Mobile Menu Button - Hide in Web and Tablet View -->
+       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+         <span class="sr-only">Toggle navigation</span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+       </button>
+       <!-- Your Logo image or text here in this Anchor(a) Tag   -->
+       <a class="navbar-brand" href="{{@blog.url}}" title="Go to - '{{@blog.title}}' - Home" class="link-white-to-theme-active">
+         <div id="hdr-logo">
+           <img src="{{@blog.logo}}">
+         </div>
+         <div id="hdr-title">
+           <span>{{@blog.title}}</span>
+         </div>
+       </a>
+     </div>
+     {{> navigation}}
+   </nav>
+ </div>
+</div>

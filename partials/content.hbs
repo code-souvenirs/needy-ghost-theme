@@ -1,20 +1,10 @@
-<section class="container-fluid content">
-    <div class="row content-row">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 content-column">
-        <div class="row content-inner-row">
-          <!-- site-content -->
-          <div class="col-xs-12 col-sm-12 col-md-9 col-lg-10 content-inner-column">
-            <div id="blog-content">
-                {{{body}}}
-            </div>
-          </div>
-          <!-- /site-content -->
-          <!-- site-sidebar -->
-          <div class="col-md-3 col-lg-2 hidden-xs hidden-sm content-inner-column">
-              {{> sidebar}}
-          </div>
-          <!-- /site-sidebar -->
-        </div>
-      </div>
-    </div>
-</section>
+<div class="col-lg-10 col-sm-9 col-xs-12 blog-list">
+  <!-- site-content -->
+  {{{body}}}
+  <!-- /site-content -->
+</div>
+<div class="col-lg-2 col-sm-3 hidden-xs ">
+  <!-- site-sidebar -->
+  {{> sidebar}}
+  <!-- /site-sidebar -->
+</div>

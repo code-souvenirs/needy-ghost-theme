@@ -50,24 +50,28 @@
     {{> analytics}}
 </head>
 <body class="{{body_class}}">
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div class="row clearfix">
+      {{! Needy Ghost Theme: Partials - Loading GIF }}
+      {{> loader}}
 
-  {{! Needy Ghost Theme: Partials - Loading GIF }}
-  {{> loader}}
+      {{! Needy Ghost Theme: Partials - Back to top link }}
+      {{> back-to-top}}
 
-  {{! Needy Ghost Theme: Partials - Back to top link }}
-  {{> back-to-top}}
+      {{! Needy Ghost Theme: Partials - Site wide header }}
+      {{> header}}
 
-  {{! Needy Ghost Theme: Partials - Site wide header }}
-  {{> header}}
-
-  {{! Needy Ghost Theme: Partials - Content - Index, Post, Page, Tags, Author etc. }}
-  {{> content}}
-
-  {{! Needy Ghost Theme: Partials - Site wide footer }}
-  {{> footer}}
-
-  {{! Ghost outputs important scripts and data with this tag }}
-  {{ghost_foot}}
+      {{! Needy Ghost Theme: Partials - Content - Index, Post, Page, Tags, Author etc. }}
+      {{> content}}
+      
+      {{! Needy Ghost Theme: Partials - Site wide footer }}
+      {{> footer}}
+      </div>
+    </div>
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+  </div>
 
   {{! Load all plugin and site scripts }}
   {{> load-js}}

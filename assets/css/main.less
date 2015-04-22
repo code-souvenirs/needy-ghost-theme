@@ -53,10 +53,36 @@ Dimension Order: Top / Right / Bottom / Left
 /** 02. Globals
 *******************************************************************************/
 
+
+.wrapper {
+  position: relative;
+  min-height:100%;
+}
+
+#footer {
+  background: #f2f2f2;
+  text-align:center;
+  padding:5px 0;
+  position:absolute;
+  bottom:0;
+  width:100%;
+}
+
+.blog-list a, .blog-list p, .blog-list {
+  word-wrap:break-word;
+}
+
+
+
+
+
+
+
+
+
 /* HTML */
 html {
     height: 100%;
-    width: 100%;
 }
 
 /* Body */
@@ -473,6 +499,6 @@ pre code, tt {
 /** 13. Imports
 *******************************************************************************/
 @import "social-icons";
-@import "mq-min320";
-@import "mq-min480";
+/*@import "mq-min320";*/
+/*@import "mq-min480";*/
 @import "mq-min768";
