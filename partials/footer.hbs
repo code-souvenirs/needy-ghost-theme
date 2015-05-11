@@ -1,5 +1,38 @@
 <!-- Footer -->
-<footer>
-  Footer
+<footer class="page-footer transparent">
+  <div class="row">
+    <div class="col l12 m12 s12">
+      <div class="center-align">
+        {{> disclaimer}}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col l12 m12 s12">
+      <div class="social">
+          <ul>
+              <li><a href="https://www.youtube.com/user/jachauhan/" rel="external" class="youtube social-norm social-both z-depth-2 circle" title="Tube ooon"></a></li>
+              <li><a href="skype:jachauhan?chat" rel="external" class="skype social-norm social-both z-depth-2 circle" title="Jibber Jabber on Skype"></a></li>
+              <li><a href="http://www.linkedin.com/profile/view?id=160776884" rel="external" class="linkedin social-norm social-both z-depth-2 circle" title="Professional and awwll"></a></li>
+              <li><a href="https://www.facebook.com/Jsinh" rel="external" class="facebook social-norm social-both z-depth-2 circle" title="I won't bite or bore"></a></li>
+              <li><a href="https://plus.google.com/+JaspalsinhChauhanthisdotlife?rel=author" rel="author external" class="googlep social-norm social-both z-depth-2 circle" title="Plus or something"></a></li>
+              <li><a href="https://twitter.com/_jsinh" rel="external" class="twitter social-norm social-both z-depth-2 circle" title="Trying with 150 character or less"></a></li>
+              <li><a href="https://github.com/jsinh" rel="external" class="github social-norm social-both z-depth-2 circle" title="You might find some interesting loops to chew on"></a></li>
+              <li><a href="http://life.jsinh.in/" rel="external" class="tumblr social-norm social-both z-depth-2 circle" title="I post every 5 years, promise"></a></li>
+              <li><a href="{{@blog.url}}/rss/" rel="external" class="rss social-norm social-both z-depth-2 circle" title="Subscribe to my blah blah"></a></li>
+          </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright grey darken-3">
+    <div class="container center-align">
+      This blog is <a href="https://www.digitalocean.com/?refcode=8a6cc3b858ed" rel="external" class="link-theme-active-to-white">Haunted</a> with <a href="https://ghost.org" rel="external" class="link-theme-active-to-white">Ghost</a> and it looks <a href="https://github.com/jsinh/needy-ghost" rel="external" class="link-theme-active-to-white">needy</a> because I designed it while I was pooping.
+    </div>
+  </div>
+  <div class="footer-copyright grey darken-3">
+    <div class="container center-align">
+      Copyright &copy; <a href="{{@blog.url}}" class="link-theme-active-to-white">{{@blog.title}}</a> 2011-{{date format="YYYY"}} &bull; All rights reserved.
+    </div>
+  </div>
 </footer>
 <!-- /Footer -->

@@ -12,6 +12,7 @@
 		04.	Pre-loader
 		05.	Back to top
 		06.	Pre-loader
+		07. Imports
 
 Note:
 Dimension Order: Top / Right / Bottom / Left
@@ -122,6 +123,23 @@ main {
   text-decoration: none;
 }
 
+.link-theme-active-to-white {
+  color: @color-active;
+	text-decoration: none;
+
+  transition:color 0.3s ease-out;
+	-o-transition:color 0.3s ease-out;
+	-ms-transition:color 0.3s ease-out;
+	-moz-transition:color 0.3s ease-out;
+	-webkit-transition:color 0.3s ease-out;
+  text-rendering: optimizeLegibility;
+}
+
+.link-theme-active-to-white:hover {
+	color: @color-body-bg;
+  text-decoration: none;
+}
+
 .link-theme-active-to-black {
   color: @color-active;
 	text-decoration: none;
@@ -148,4 +166,112 @@ main {
   position: relative; }
 
 .pinned {
-  position: fixed !important; }
+  position: fixed !important;
+}
+
+.post-title {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.post-title h1 {
+	font-size: 2em;
+	line-height: 2rem;
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+
+.post-content h1 {
+	font-size: 2em;
+	line-height: 2rem;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.post-content h2 {
+	font-size: 1.8em;
+	line-height: 2rem;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.post-content h3 {
+	font-size: 1.6em;
+	line-height: 2rem;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.post-content h4 {
+	font-size: 1.4em;
+	line-height: 2rem;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.post-content h5 {
+	font-size: 1.2em;
+	line-height: 2rem;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.post-content code {
+	background-color: #e0e0e0 !important;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.post-content blockquote {
+	border-color: #e0e0e0 !important;
+}
+
+.post-content ul {
+	padding: 0 25px !important;
+	list-style-type: inherit !important;
+}
+
+.post-content li {
+	padding-left: 0px !important;
+	list-style-type: inherit !important;
+}
+
+.post-content a {
+	color: @color-active;
+	text-decoration: none;
+
+  transition:color 0.3s ease-out;
+	-o-transition:color 0.3s ease-out;
+	-ms-transition:color 0.3s ease-out;
+	-moz-transition:color 0.3s ease-out;
+	-webkit-transition:color 0.3s ease-out;
+  text-rendering: optimizeLegibility;
+}
+
+.post-content img {
+	max-width: 100%;
+}
+
+.post-content a:hover {
+	color: @color-text;
+  text-decoration: none;
+}
+
+.author-picture {
+	width: 6rem;
+	height: 6rem;
+}
+
+footer.page-footer {
+	margin-top: 0px;
+	padding-top: 0px;
+}
+
+.author-meta-url {
+	font-size: 1.5rem;
+}
+
+
+/** 07. Imports
+*******************************************************************************/
+@import "social-icons";
