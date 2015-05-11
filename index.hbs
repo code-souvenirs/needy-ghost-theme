@@ -1,0 +1,19 @@
+{{!< default}}
+{{#foreach posts}}
+<article class="{{post_class}} card-panel grey lighten-5">
+    <div class="section">
+      <h5 class="link-theme-active-to-black"><a href="{{url}}" class="link-theme-active-to-black">{{{title}}}</a></h5>
+      <p>{{excerpt words="150"}} <a class="link-theme-active-to-black" href="{{url}}">&raquo; Read more</a></p>
+    </div>
+    <div class="divider"></div>
+    <div class="section">
+      <div class="valign-wrapper left">
+        {{#author}}
+        <i class="mdi-social-person-outline"></i>&nbsp;<strong><a class="link-theme-active-to-black valign left-align" href="{{url}}" title={{name}}>{{name}}</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        {{/author}}
+        <i class="tiny mdi-device-access-alarms valign"></i>&nbsp;<time class="valign" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+      </div>
+    </div>
+</article>
+{{/foreach}}
+{{pagination}}

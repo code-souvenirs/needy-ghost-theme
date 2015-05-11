@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--[if IE 8]>          <html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>          <html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->  <html><!--<![endif]-->
+<head>
+    {{! ----------------------------------- Document setting ----------------------------------- }}
+    <!-- Encoding used -->
+    <meta charset="utf-8" />
+    <!-- IE version's standard fix -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    {{! ----------------------------------- Document setting ----------------------------------- }}
+
+    {{! --------------------------------------- Page meta --------------------------------------- }}
+    <!-- Page title -->
+    {{#is "post, page"}}
+        <title>{{meta_title}} - {{@blog.title}}</title>
+    {{else}}
+        <title>{{meta_title}}</title>
+    {{/is}}
+    <!-- Page description -->
+    <meta name="description" content="{{meta_description}}"/>
+    <!-- Page Authorship -->
+    <link rel="author" href="https://plus.google.com/+JaspalsinhChauhanthisdotlife"/>
+    <!-- Page keywords -->
+    <meta name="keywords" content="Jsinh,Jaspal,Jachauhan,Jaspalsinh Chauhan,This dot life,_jsinh,jsinh blog,dotnet,.NET,C#,csharp,ASP.NET,ASP.NET MVC,ASP.NET 5,how to,tutorials" />
+    <!-- Page robots -->
+    <meta name="robots" content="index,follow" />
+    {{! --------------------------------------- Page meta --------------------------------------- }}
+
+    {{! ------------------------------------- Responsive meta ------------------------------------ }}
+    <!-- Responsive UI design meta -->
+    <meta name="HandheldFriendly" content="True" />
+    <!-- Responsive UI viewport fix -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+    {{! ------------------------------------- Responsive meta ------------------------------------ }}
+
+    {{! ---------------------------------------- Favicon ----------------------------------------- }}
+    <!-- Favicon -->
+    <link rel="icon" href="{{asset "/favicon.ico"}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{asset "/favicon.ico"}}" type="image/x-icon">
+    {{! ---------------------------------------- Favicon ----------------------------------------- }}
+
+    {{! Needy Ghost Theme: Partials - Site wide HEAD CSS }}
+    {{> load-css}}
+
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}} grey lighten-2">
+  {{! Needy Ghost Theme: Partials - Loading GIF and back to top link }}
+  {{> lbtt}}
+
+  {{! Needy Ghost Theme: Partials - Site wide header }}
+  {{> header}}
+
+  <main>
+    <div class="row">
+      <div class="col l9 m12 s12">
+        <div class="content-wrapper">
+          {{{body}}}
+        </div>
+      </div>
+
+      {{! Needy Ghost Theme: Partials - Site wide sidebar (invisible in mobile devices) }}
+      {{> sidebar}}
+    </div>
+  </main>
+
+  {{! Needy Ghost Theme: Partials - Site wide footer }}
+  {{> footer}}
+
+  {{! Ghost outputs important scripts and data with this tag, including jQuery thus load-js is added after this }}
+  {{ghost_foot}}
+
+  {{! Load all plugin and site scripts }}
+  {{> load-js}}
+</body>
+</html>

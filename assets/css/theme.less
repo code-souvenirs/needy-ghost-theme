@@ -1,0 +1,151 @@
+// out: theme.min.css, sourcemap: true, compress: true
+/*******************************************************************************
+	@Author			Jaspalsinh Chauhan (Jsinh)
+	@Website		http://www.jsinh.in
+	@Last Update	12:10 AM Tuesday, May 12, 2015
+
+	TABLE CONTENTS
+	-------------------------------
+    01. Color pallete
+		02. Globals
+		03. Fixed footer
+		04.	Pre-loader
+		05.	Back to top
+		06.	Pre-loader
+
+Note:
+Dimension Order: Top / Right / Bottom / Left
+*******************************************************************************/
+
+/** 01. Color pallete
+*******************************************************************************/
+@color-active                       : #DF5A48;
+@color-text                         : #3A4145;
+@color-body-bg                      : #F2F2F2;
+@color-content-border               : #E9E9E9;
+
+/** 02. Globals
+*******************************************************************************/
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+/** 03. Fixed footer
+*******************************************************************************/
+main {
+  flex: 1 0 auto;
+}
+
+/** 04.	Sidebar
+*******************************************************************************/
+.sidebar {
+	margin: 20px 10px 20px 10px;
+	opacity: 0;
+}
+
+.content-wrapper {
+	margin: 20px 10px 20px 10px;
+}
+
+/** 05.	Back to top
+*******************************************************************************/
+.back-to-top {
+	z-index: 100;
+  position: fixed;
+  bottom: 1.5em;
+	right: 1.5em;
+  display: none;
+}
+
+/** 06.	Pre-loader
+*******************************************************************************/
+.loader {
+  display: block;
+  position: fixed;
+  z-index: 100;
+  top: 22px;
+  right: -moz-calc(50%);
+  right: -webkit-calc(50%);
+  right: calc(50%);
+}
+
+.content-wrapper {
+	opacity: 0;
+}
+
+.blog-title {
+	display: table;
+  width: 270px;
+	padding: 0 0 5px 0;
+}
+
+.blog-title span {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.post-list-meta {
+	display: table;
+}
+
+.post-list-meta image a i time {
+	display: table-cell;
+  vertical-align: middle;
+}
+
+.blog-logo {
+	width: 45px;
+	height: 45px;
+	margin: 10px 0 0 20px;
+}
+
+.device-menu-link {
+	margin: 0 0 0 20px;
+}
+
+.link-white-to-theme-active {
+  color: @color-body-bg;
+	text-decoration: none;
+
+  transition:color 0.3s ease-out;
+	-o-transition:color 0.3s ease-out;
+	-ms-transition:color 0.3s ease-out;
+	-moz-transition:color 0.3s ease-out;
+	-webkit-transition:color 0.3s ease-out;
+  text-rendering: optimizeLegibility;
+}
+
+.link-white-to-theme-active:hover {
+	color: @color-active;
+  text-decoration: none;
+}
+
+.link-theme-active-to-black {
+  color: @color-active;
+	text-decoration: none;
+
+  transition:color 0.3s ease-out;
+	-o-transition:color 0.3s ease-out;
+	-ms-transition:color 0.3s ease-out;
+	-moz-transition:color 0.3s ease-out;
+	-webkit-transition:color 0.3s ease-out;
+  text-rendering: optimizeLegibility;
+}
+
+.link-theme-active-to-black:hover {
+	color: @color-text;
+  text-decoration: none;
+}
+
+.author-thumb {
+	width: 50px;
+	height: 50px;
+}
+
+.pin-top, .pin-bottom {
+  position: relative; }
+
+.pinned {
+  position: fixed !important; }

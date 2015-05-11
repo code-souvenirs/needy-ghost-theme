@@ -1,0 +1,13 @@
+<div class="pagination" role="navigation">
+  <span class="valign-wrapper">
+    {{#if prev}}
+      <a class="btn-floating btn-small waves-effect waves-light deep-orange valign center-align" href="{{page_url prev}}" title="Older posts"><i class="mdi-navigation-arrow-back small"></i></a>
+    {{/if}}
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="page-number valign center-align">Page {{page}} of {{pages}}</span>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    {{#if next}}
+      <a class="btn-floating btn-small waves-effect waves-light deep-orange valign center-align" href="{{page_url next}}" title="Newer posts"><i class="mdi-navigation-arrow-forward small"></i></a>
+    {{/if}}
+  </span>
+</div>
