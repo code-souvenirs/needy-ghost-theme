@@ -17,8 +17,9 @@
 
 *******************************************************************************/
 
-/* 01. Init - Document ready - jQuery
+/* 01. Init - Window & Document ready - jQuery
 *******************************************************************************/
+
 jQuery(window).ready(function () {
 
 	NeedyGhost();
@@ -29,6 +30,7 @@ jQuery(window).ready(function () {
 *******************************************************************************/
 function NeedyGhost() {
 
+	$('.parallax').parallax();
 	ApplyCollapsableNavigation();
 	ApplyLoader();
 	ApplyBackToTop();
