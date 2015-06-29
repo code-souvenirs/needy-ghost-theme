@@ -1,3 +1,0 @@
-User-agent: *
-Disallow: /ghost/
-Sitemap: http://blog.jsinh.in/sitemap.xml

@@ -1,9 +1,0 @@
-{{#if @blog.navigation}}
-<div class="collapse navbar-collapse text-center" id="bs-example-navbar-collapse-1">
-  <ul class="nav navbar-nav">
-    {{#foreach @blog.navigation}}
-    <li role="presentation" class="active"><a class="link-white-to-theme-active" href="{{url absolute="true"}}">{{label}}</a></li>
-    {{/foreach}}
-  </ul>
-</div>
-{{/if}}
