@@ -146,7 +146,9 @@ You can find all possible ways to connect with me at my [blog](http://blog.jsinh
 
 ---
 
-###Following theme was developed using [Atom Editor](http://atom.io) (trust me it is awesome)
+###Development notes:
+
+Developed using [Atom Editor](http://atom.io) (trust me it is awesome)
 
 **List of packages actively used:**
 * Color Picker ([color-picker](https://atom.io/packages/color-picker))
