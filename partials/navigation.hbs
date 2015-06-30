@@ -1,0 +1,15 @@
+{{#if @blog.navigation}}
+  <a href="#" data-activates="device-hamburger-menu" class="button-collapse device-menu-link">
+    <i class="mdi-navigation-menu"></i>
+  </a>
+  <ul id="nav-mobile" class="right hide-on-med-and-down">
+    {{#foreach navigation}}
+    <li role="presentation"><a class="link-white-to-theme-active" href="{{url absolute="true"}}">{{label}}</a></li>
+    {{/foreach}}
+  </ul>
+  <ul class="side-nav" id="device-hamburger-menu">
+    {{#foreach navigation}}
+    <li role="presentation" class="{{#if current}}active{{/if}}"><a class="link-white-to-theme-active" href="{{url absolute="true"}}">{{label}}</a></li>
+    {{/foreach}}
+  </ul>
+{{/if}}

@@ -1,100 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-    	{{! Document settings }}
-        <!-- Encoding used -->
-        <meta charset="utf-8" />
-        <!-- IE version's standard fix -->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!--[if IE 8]>          <html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>          <html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->  <html><!--<![endif]-->
+<head>
+    {{! ----------------------------------- Document setting ----------------------------------- }}
+    <!-- Encoding used -->
+    <meta charset="utf-8" />
+    <!-- IE version's standard fix -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    {{! ----------------------------------- Document setting ----------------------------------- }}
 
-        {{! Page meta }}
-        <!-- Page title -->
+    {{! --------------------------------------- Page meta --------------------------------------- }}
+    <!-- Page title -->
+    {{#is "post, page"}}
+        <title>{{meta_title}} - {{@blog.title}}</title>
+    {{else}}
         <title>{{meta_title}}</title>
-        <!-- Page description -->
-        <meta name="description" content="{{@blog.description}}" />
+    {{/is}}
+    <!-- Page description -->
+    <meta name="description" content="{{meta_description}}"/>
+    <!-- Page Authorship -->
+    <link rel="author" href="https://plus.google.com/+YourGooglePlusProfileUrl"/>
+    <!-- Page keywords -->
+    <meta name="keywords" content="needy-ghost,ghost,ghost blogging platform,theme,need ghost,Jsinh,Jaspal,Jachauhan,Jaspalsinh Chauhan" />
+    <!-- Page robots -->
+    <meta name="robots" content="index,follow" />
+    {{! --------------------------------------- Page meta --------------------------------------- }}
 
-        {{! Responsive meta }}
-        <!-- Responsive UI design meta -->
-        <meta name="HandheldFriendly" content="True" />
-        <!-- Responsive UI mobile optimized -->
-        <meta name="MobileOptimized" content="320" />
-        <!-- Responsive UI viewport fix -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {{! ------------------------------------- Responsive meta ------------------------------------ }}
+    <!-- Responsive UI design meta -->
+    <meta name="HandheldFriendly" content="True" />
+    <!-- Responsive UI viewport fix -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+    {{! ------------------------------------- Responsive meta ------------------------------------ }}
 
-        {{! Font settings - Change to use your choice of fonts }}
-		<!-- Google fonts import - Open Sans -->
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,800' rel='stylesheet' type='text/css'>
+    {{! ---------------------------------------- Favicon ----------------------------------------- }}
+    <!-- Favicon -->
+    <link rel="icon" href="{{asset "/favicon.ico"}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{asset "/favicon.ico"}}" type="image/x-icon">
+    {{! ---------------------------------------- Favicon ----------------------------------------- }}
 
-        {{! Style imports }}
-        <!-- Normalize First -->
-        <link rel="stylesheet" type="text/css" href="{{asset "/css/normalize.css"}}" />
-        <!-- Style for syntax highlighting - Gangnam..oops Github style -->
-        <link rel="stylesheet" type="text/css" href="http://yandex.st/highlightjs/8.0/styles/github.min.css">
-        <!-- Site wide styles -->
-        <link rel="stylesheet" type="text/css" href="{{asset "/css/main.css"}}" media="screen  and (min-width: 1024px)" />
-        <!--[if (lt IE 9)&(!IEMobile)]>
-        <link rel="stylesheet" type="text/css" href="{{asset "/css/main.css"}}" />
-        <![endif]-->
-        <!-- Responsive UI styles -->
-        <link rel="stylesheet" type="text/css" href="{{asset "/css/responsive.css"}}" media="screen and (max-width: 1024px)" />
+    {{! Needy Ghost Theme: Partials - Site wide HEAD CSS }}
+    {{> load-css}}
 
-		{{! Touch icons and favicon - Pending implementation }}
-		<!-- TODO: Create this icons to support apple touch devices
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{asset "/images/apple-touch-icon-144x144-precomposed.png"}}" />
-	    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{asset "/images/apple-touch-icon-114x114-precomposed.png"}}" />
-	    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{asset "/images/apple-touch-icon-72x72-precomposed.png"}}" />
-	    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{asset "/images/apple-touch-icon-57x57-precomposed.png"}}" />
-	    <link rel="apple-touch-icon-precomposed" href="{{asset "/images/apple-touch-icon-precomposed.png"}}" />
-	    <link rel="apple-touch-icon" href="{{asset "/images/apple-touch-icon.png"}}" />
-		-->
-        <link rel="icon" href="{{asset "/images/favicon.ico"}}" type="image/x-icon">
-        <link rel="shortcut icon" href="{{asset "/images/favicon.ico"}}" type="image/x-icon">
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}} grey lighten-2">
+  {{! Needy Ghost Theme: Partials - Loading GIF and back to top link }}
+  {{> lbtt}}
 
-        {{! Google analytics script - Paste here }}
+  {{! Needy Ghost Theme: Partials - Site wide header }}
+  {{> header}}
 
-        {{! Ghost outputs important style and meta data with this tag }}
-        {{ghost_head}}
-    </head>
-    <body class="{{body_class}}">
-
-		{{! Needy Ghost Theme: Partials - Site wide header }}
-        {{> header}}
-
-        <div id="body" role="main">
-        <div class="loader" role="loader"><div class="loader-icon"></div></div>
-            <div id="content">
-    	        {{! Everything else gets inserted here }}
-                {{{body}}}
-            </div>
-            {{> sidebar}}
+  <main>
+    <div class="row">
+      <!-- Needy Ghost Theme: Change 'l9' to 'l12' if sidebar is removed
+           and you want full width main content -->
+      <div class="col l9 m12 s12">
+        <div class="content-wrapper">
+          {{{body}}}
+          <!-- EMPTY BLOCK TO ADD SOMETHING AFTER MAIN CONTENT ON ALL PAGES - BEGINS -->
+          <div class="card-panel center-align">
+            **Place your content or ad block snippet here**
+          </div>
+          <!-- EMPTY BLOCK TO ADD SOMETHING AFTER MAIN CONTENT ON ALL PAGES - ENDS -->
         </div>
+      </div>
 
-        <a href="#" class="back-to-top">Back to Top</a>
+      {{! Needy Ghost Theme: Partials - Site wide sidebar (not visible in mobile devices) }}
+      {{> sidebar}}
+    </div>
+  </main>
 
-        {{! Needy Ghost Theme: Site wide disclaimer }}
-        {{> disclaimer}}
+  {{! Needy Ghost Theme: Partials - Site wide footer }}
+  {{> footer}}
 
-        {{! Needy Ghost Theme: Site wide footer section }}
-        <footer id="footer">
+  {{! Ghost outputs important scripts and data with this tag, including jQuery thus load-js is added after this }}
+  {{ghost_foot}}
 
-        	{{! Needy Ghost Theme: Partials - Social badge integration }}
-        	{{> social-footer}}
-
-        	{{! Needy Ghost Theme: Partials - Site wide footer notes }}
-        	{{> footer-notes}}
-        </footer>
-
-    	{{! Ghost outputs important scripts and data with this tag }}
-        {{ghost_foot}}
-
-        {{! Awwaal scripts load here }}
-        <!-- Load: FitVids - making videos responsive -->
-        <script src="//cdn.jsdelivr.net/fitvids/1.1.0/jquery.fitvids.js"></script>
-        <!-- Load: Highlight - formatting for code snippets -->
-        <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
-        <!-- Load: Main - site wide script -->
-        <script type="text/javascript" src="{{asset "/js/main.js"}}"></script>
-        <!-- Initialize: code formatter - Highlight -->
-        <script>hljs.initHighlightingOnLoad();</script>
-    </body>
+  {{! Load all plugin and site scripts }}
+  {{> load-js}}
+</body>
 </html>

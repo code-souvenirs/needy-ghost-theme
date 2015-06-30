@@ -1,8 +1,11 @@
-<nav class="pagination" role="pagination">
-    {{#if prev}}
-        <a class="newer-posts" href="{{page_url prev}}">&larr; Newer posts</a>
-    {{/if}}
-    {{#if next}}
-        <a class="older-posts" href="{{page_url next}}">Older posts &rarr;</a>
-    {{/if}}
-</nav>
+<div class="pagination center-align" role="navigation">
+  {{#if prev}}
+    <a class="btn-floating btn-small waves-effect waves-light deep-orange valign" href="{{page_url prev}}" title="Older posts"><i class="mdi-navigation-arrow-back small"></i></a>
+  {{/if}}
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <span class="page-number valign">Page {{page}} of {{pages}}</span>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  {{#if next}}
+    <a class="btn-floating btn-small waves-effect waves-light deep-orange valign" href="{{page_url next}}" title="Newer posts"><i class="mdi-navigation-arrow-forward small"></i></a>
+  {{/if}}
+</div>

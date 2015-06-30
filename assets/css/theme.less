@@ -1,0 +1,344 @@
+// out: theme.min.css, sourcemap: true, compress: true
+/*******************************************************************************
+	@Author			Jaspalsinh Chauhan (Jsinh)
+	@Website		http://www.jsinh.in
+	@Last Update	12:10 AM Tuesday, May 12, 2015
+
+	TABLE CONTENTS
+	-------------------------------
+    01. Color pallete
+		02. Globals
+		03. Fixes
+		04.	Sidebar
+		05. Back-To-Top
+		06.	Pre-loader
+		07.	Side wide header
+		08. Main content - Index / Post
+		09. Content - Index
+		10. Content - Post
+		11. Side wide footer
+		12. Media Queries
+
+Note:
+Dimension Order: Top / Right / Bottom / Left
+*******************************************************************************/
+
+/** 01. Color pallete
+*******************************************************************************/
+@color-active                       : #DF5A48;
+@color-text                         : #3A4145;
+@color-body-bg                      : #F2F2F2;
+@color-content-border               : #E9E9E9;
+@color-codequote-bg									: #E0E0E0;
+/******************************************************************************/
+
+/** 02. Globals
+*******************************************************************************/
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+.link-white-to-theme-active {
+  color: @color-body-bg;
+	text-decoration: none;
+
+  transition:color 0.3s ease-out;
+	-o-transition:color 0.3s ease-out;
+	-ms-transition:color 0.3s ease-out;
+	-moz-transition:color 0.3s ease-out;
+	-webkit-transition:color 0.3s ease-out;
+  text-rendering: optimizeLegibility;
+}
+
+.link-white-to-theme-active:hover {
+	color: @color-active;
+  text-decoration: none;
+}
+
+.link-theme-active-to-white {
+  color: @color-active;
+	text-decoration: none;
+
+  transition:color 0.3s ease-out;
+	-o-transition:color 0.3s ease-out;
+	-ms-transition:color 0.3s ease-out;
+	-moz-transition:color 0.3s ease-out;
+	-webkit-transition:color 0.3s ease-out;
+  text-rendering: optimizeLegibility;
+}
+
+.link-theme-active-to-white:hover {
+	color: @color-body-bg;
+  text-decoration: none;
+}
+
+.link-theme-active-to-black {
+  color: @color-active;
+	text-decoration: none;
+
+  transition:color 0.3s ease-out;
+	-o-transition:color 0.3s ease-out;
+	-ms-transition:color 0.3s ease-out;
+	-moz-transition:color 0.3s ease-out;
+	-webkit-transition:color 0.3s ease-out;
+  text-rendering: optimizeLegibility;
+}
+
+.link-theme-active-to-black:hover {
+	color: @color-text;
+  text-decoration: none;
+}
+/******************************************************************************/
+
+/** 03. Fixes
+*******************************************************************************/
+main {
+  flex: 1 0 auto;
+}
+/******************************************************************************/
+
+/** 04.	Sidebar
+*******************************************************************************/
+.sidebar {
+	margin: 20px 10px 20px 10px;
+	opacity: 0;
+}
+/******************************************************************************/
+
+/** 05.	Back to top
+*******************************************************************************/
+.back-to-top {
+	z-index: 100;
+  position: fixed;
+  bottom: 2.5rem;
+	right: 3em;
+  display: none;
+}
+/******************************************************************************/
+
+/** 06.	Pre-loader
+*******************************************************************************/
+.loader {
+  display: block;
+  position: fixed;
+  z-index: 100;
+  top: 18px;
+  right: -moz-calc(50%);
+  right: -webkit-calc(50%);
+  right: calc(50%);
+}
+/******************************************************************************/
+
+/** 07.	Side wide header
+*******************************************************************************/
+.blog-logo {
+	width: 45px;
+	height: 45px;
+	margin: 10px 0 0 20px;
+}
+
+.blog-title {
+	display: table;
+	padding: 0 0 5px 0;
+}
+
+.blog-title span {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.blog-title-text {
+	line-height: 0;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-left: 10px;
+}
+
+.device-menu-link {
+	margin: 0 0 0 20px;
+}
+/******************************************************************************/
+
+/** 08.	Main content - Index / Post
+*******************************************************************************/
+.content-wrapper {
+	margin: 20px 10px 20px 10px;
+	opacity: 0;
+}
+/******************************************************************************/
+
+/** 09.	Content - Index
+*******************************************************************************/
+.blog-list-item-article {
+	padding-top:0px;
+	padding-bottom:0px;
+}
+/******************************************************************************/
+
+/** 10.	Content - Post
+*******************************************************************************/
+.post-title {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.post-title h1 {
+	font-size: 2em;
+	line-height: 2rem;
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+
+.post-content h1 {
+	font-size: 2em;
+	line-height: 2rem;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.post-content h2 {
+	font-size: 1.8em;
+	line-height: 2rem;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.post-content h3 {
+	font-size: 1.6em;
+	line-height: 2rem;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.post-content h4 {
+	font-size: 1.4em;
+	line-height: 2rem;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.post-content h5 {
+	font-size: 1.2em;
+	line-height: 2rem;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.post-content code {
+	background-color: @color-codequote-bg !important;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.post-content blockquote {
+	border-color: @color-codequote-bg !important;
+}
+
+.post-content ul {
+	padding: 0 25px !important;
+	list-style-type: inherit !important;
+}
+
+.post-content li {
+	padding-left: 0px !important;
+	list-style-type: inherit !important;
+}
+
+.post-content a {
+	color: @color-active;
+	text-decoration: none;
+
+  transition:color 0.3s ease-out;
+	-o-transition:color 0.3s ease-out;
+	-ms-transition:color 0.3s ease-out;
+	-moz-transition:color 0.3s ease-out;
+	-webkit-transition:color 0.3s ease-out;
+  text-rendering: optimizeLegibility;
+}
+
+.post-content img {
+	max-width: 100%;
+}
+
+.post-content a:hover {
+	color: @color-text;
+  text-decoration: none;
+}
+
+.author-picture {
+	width: 6rem;
+	height: 6rem;
+}
+
+.author-meta-url {
+	font-size: 1.5rem;
+}
+/******************************************************************************/
+
+/** 11. Side wide footer
+*******************************************************************************/
+footer.page-footer {
+	margin-top: 0px;
+	padding-top: 0px;
+}
+
+.footer-icon-credits {
+	margin-top: 0px;
+	padding-bottom: 5px;
+	font-size: 0.9rem;
+}
+
+.footer-copyright {
+	margin-bottom: 0px;
+	font-size: 1.1rem;
+}
+
+.footer-social-icons {
+	width: 3.5rem;
+	height: 3.5rem;
+	display: block;
+	border-width: 1px;
+	border-style: solid;
+	border-color: white;
+}
+
+.footer-social-links img {
+	opacity: 0.7;
+	filter: alpha(opacity=70); /* For IE8 and earlier */
+  transition: transform 0.2s ease;
+}
+
+.footer-social-links:hover img {
+  transform: translateY(-10px);
+}
+
+.social {
+  margin: 15px 0 0 0;
+	text-align: center;
+}
+
+.social ul {
+  margin: 0;
+  padding: 0;
+	list-style: none;
+}
+
+.social ul li {
+	display: inline-block;
+}
+/******************************************************************************/
+
+/** 12. Media Queries
+*******************************************************************************/
+@media screen and (max-width: 600px) {
+	.blog-logo {
+        display: none;
+    }
+
+  .blog-title span {
+			 display: inline;
+	}
+}
+/******************************************************************************/

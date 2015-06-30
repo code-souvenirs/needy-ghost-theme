@@ -1,31 +1,52 @@
 {{!< default}}
 {{#post}}
-	<article>
-	    <header class="post-excerpt-header">
-	        <h2><a href="{{url}}">{{title}}</a></h2>
-	        <hr />
-	        {{! Needy Ghost Theme: Post wide meta information - Author, Published time }}
-        	{{> post-meta}}
-	    </header>
-	    <section class="post-excerpt-content">
-	        <div class="post-content">{{content}}</div>
-	    </section>
-	    <hr />
-	    <footer class="post-excerpt-footer">
-	        <div id="profile"><img src="{{author.image}}" alt="This is what {{author.name}} looks like !!" class="profile-photo"><h2>{{author}}</h2></img></div>
-	        <div id="about-me-text">
-	            <span>{{author.bio}}</span>
-	        </div>
-	        <div id="tag-cloud">
-	        {{! Needy Ghost Theme: Post wide tags }}
-        	{{#if tags}}
-	            <span class="post-excerpt-footer-taglabel">{{tags}}</span>
-    	    {{/if}}
-	        </div>
-	        <div id="add-this">
-	        	{{! AddThis (addthis.com) integration code - Paste here }}
-	        </div>
-	        {{! Disqus integration code - Paste here }}
-	    </footer>
-	</article>
+<article class="{{post_class}} card-panel grey lighten-5">
+  <div class="section post-title">
+      <h1><a class="link-theme-active-to-black" href="{{url}}">{{title}}</a></h1>
+  </div>
+  <div class="section">
+    <div class="valign-wrapper">
+      {{#author}}
+      <i class="mdi-social-person-outline"></i>&nbsp;<strong><a class="link-theme-active-to-black valign left-align" href="{{url}}" title={{name}}>{{name}}</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      {{/author}}
+      <i class="tiny mdi-device-access-alarms valign"></i>&nbsp;<time class="valign" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="post-content">{{content}}</div>
+</article>
+<div class="card-panel">
+  {{#author}}
+  <div class="row">
+    <div class="col l2 m2 s12 center-align valign">
+      <img src="{{image}}" alt="This is what {{name}} looks like !!" class="circle author-picture"/>
+    </div>
+    <div class="col l10 m10 s12 left-align valign">
+      <a href="{{url}}" class="link-theme-active-to-black author-meta-url">{{name}}</a><br/>
+      <span class="valign">{{bio}}</span>
+    </div>
+  </div>
+  {{/author}}
+  {{#if tags}}
+  <div class="row">
+    <div class="col l12 m12 s12">
+      {{#foreach tags}}
+      <i class="mdi-action-label-outline tiny"></i>&nbsp;<a href="{{url}}" class="link-theme-active-to-black" title="{{name}}">{{name}}</a>&nbsp;&nbsp;
+      {{/foreach}}
+    </div>
+  </div>
+  {{/if}}
+  <!-- SOCIAL SHARING SECTION - BEGINS -->
+  <div class="row">
+    <div class="col l12 m12 s12">
+      **Place your social sharing and / or 'AddThis' snippet here**
+    </div>
+  </div>
+  <!-- SOCIAL SHARING SECTION - ENDS -->
+</div>
+<!-- DISQUS OR OTHER COMMENT SECTION - BEGINS -->
+<div class="card-panel">
+  **Place your disqus / other comment snippet here**
+</div>
+<!-- DISQUS OR OTHER COMMENT SECTION - ENDS -->
 {{/post}}

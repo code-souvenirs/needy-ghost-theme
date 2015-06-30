@@ -1,30 +1,17 @@
 {{!< default}}
-
 {{#foreach posts}}
-<article>
-    <header class="post-excerpt-header">
-        <h2><a href="{{url}}" title="Read &quot;{{title}}&quot;">{{title}}</a></h2>
-        <hr />
-        {{! Needy Ghost Theme: Post wide meta information - Author, Published time }}
-        {{> post-meta}}
-    </header>
-    <section class="post-excerpt-content">
-        <p>{{excerpt characters="350"}}&hellip;<span class="keep-reading"><a href="{{url}}" title="Read &quot;{{title}}&quot;">keep reading</a></span></p>
-    </section>
-    <footer class="post-excerpt-footer">
-        {{! Needy Ghost Theme: Post wide tags }}
-        {{#if tags}}
-            <span class="post-excerpt-footer-taglabel">{{tags}}</span>
-        {{/if}}
-    </footer>
+<article class="{{post_class}} blog-list-item-article card-panel grey lighten-5">
+    <div class="section">
+      <h5 class="link-theme-active-to-black"><a href="{{url}}" class="link-theme-active-to-black">{{{title}}}</a></h5>
+      <p class="valign">{{excerpt words="150"}} <a class="link-theme-active-to-black" href="{{url}}">&raquo; Read more</a></p>
+    </div>
+    <div class="divider"></div>
+    <div class="section">
+      {{#author}}
+      <i class="mdi-social-person-outline right-align"></i>&nbsp;<strong><a class="link-theme-active-to-black valign left-align" href="{{url}}" title={{name}}>{{name}}</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      {{/author}}
+      <i class="tiny mdi-device-access-alarms valign right-align"></i>&nbsp;<time class="valign right-align" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+    </div>
 </article>
 {{/foreach}}
-
-{{! Pagination }}
-{{#if pagination.prev}}
-    {{pagination}}
-{{else}}
-    {{#if pagination.next}}
-        {{pagination}}
-    {{/if}}
-{{/if}}
+{{pagination}}
