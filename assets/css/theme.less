@@ -8,12 +8,16 @@
 	-------------------------------
     01. Color pallete
 		02. Globals
-		03. Fixed footer
-		04.	Pre-loader
-		05.	Back to top
+		03. Fixes
+		04.	Sidebar
+		05. Back-To-Top
 		06.	Pre-loader
-		07. Media Queries
-		08. Imports
+		07.	Side wide header
+		08. Main content - Index / Post
+		09. Content - Index
+		10. Content - Post
+		11. Side wide footer
+		12. Media Queries
 
 Note:
 Dimension Order: Top / Right / Bottom / Left
@@ -25,6 +29,8 @@ Dimension Order: Top / Right / Bottom / Left
 @color-text                         : #3A4145;
 @color-body-bg                      : #F2F2F2;
 @color-content-border               : #E9E9E9;
+@color-codequote-bg									: #E0E0E0;
+/******************************************************************************/
 
 /** 02. Globals
 *******************************************************************************/
@@ -32,90 +38,6 @@ body {
 	display: flex;
 	min-height: 100vh;
 	flex-direction: column;
-}
-
-/** 03. Fixed footer
-*******************************************************************************/
-main {
-  flex: 1 0 auto;
-}
-
-/** 04.	Sidebar
-*******************************************************************************/
-.sidebar {
-	margin: 20px 10px 20px 10px;
-	opacity: 0;
-}
-
-.content-wrapper {
-	margin: 20px 10px 20px 10px;
-}
-
-.blog-list-item-article {
-	padding-top:0px;
-	padding-bottom:0px;
-}
-
-/** 05.	Back to top
-*******************************************************************************/
-.back-to-top {
-	z-index: 100;
-  position: fixed;
-  bottom: 2.5rem;
-	right: 3em;
-  display: none;
-}
-
-/** 06.	Pre-loader
-*******************************************************************************/
-.loader {
-  display: block;
-  position: fixed;
-  z-index: 100;
-  top: 18px;
-  right: -moz-calc(50%);
-  right: -webkit-calc(50%);
-  right: calc(50%);
-}
-
-.content-wrapper {
-	opacity: 0;
-}
-
-.blog-title {
-	display: table;
-	padding: 0 0 5px 0;
-}
-
-.blog-title span {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.blog-title-text {
-	line-height: 0;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	padding-left: 10px;
-}
-
-.post-list-meta {
-	display: table;
-}
-
-.post-list-meta image a i time {
-	display: table-cell;
-  vertical-align: middle;
-}
-
-.blog-logo {
-	width: 45px;
-	height: 45px;
-	margin: 10px 0 0 20px;
-}
-
-.device-menu-link {
-	margin: 0 0 0 20px;
 }
 
 .link-white-to-theme-active {
@@ -168,12 +90,95 @@ main {
 	color: @color-text;
   text-decoration: none;
 }
+/******************************************************************************/
 
-.author-thumb {
-	width: 50px;
-	height: 50px;
+/** 03. Fixes
+*******************************************************************************/
+main {
+  flex: 1 0 auto;
+}
+/******************************************************************************/
+
+/** 04.	Sidebar
+*******************************************************************************/
+.sidebar {
+	margin: 20px 10px 20px 10px;
+	opacity: 0;
+}
+/******************************************************************************/
+
+/** 05.	Back to top
+*******************************************************************************/
+.back-to-top {
+	z-index: 100;
+  position: fixed;
+  bottom: 2.5rem;
+	right: 3em;
+  display: none;
+}
+/******************************************************************************/
+
+/** 06.	Pre-loader
+*******************************************************************************/
+.loader {
+  display: block;
+  position: fixed;
+  z-index: 100;
+  top: 18px;
+  right: -moz-calc(50%);
+  right: -webkit-calc(50%);
+  right: calc(50%);
+}
+/******************************************************************************/
+
+/** 07.	Side wide header
+*******************************************************************************/
+.blog-logo {
+	width: 45px;
+	height: 45px;
+	margin: 10px 0 0 20px;
 }
 
+.blog-title {
+	display: table;
+	padding: 0 0 5px 0;
+}
+
+.blog-title span {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.blog-title-text {
+	line-height: 0;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-left: 10px;
+}
+
+.device-menu-link {
+	margin: 0 0 0 20px;
+}
+/******************************************************************************/
+
+/** 08.	Main content - Index / Post
+*******************************************************************************/
+.content-wrapper {
+	margin: 20px 10px 20px 10px;
+	opacity: 0;
+}
+/******************************************************************************/
+
+/** 09.	Content - Index
+*******************************************************************************/
+.blog-list-item-article {
+	padding-top:0px;
+	padding-bottom:0px;
+}
+/******************************************************************************/
+
+/** 10.	Content - Post
+*******************************************************************************/
 .post-title {
 	padding-top: 0px;
 	padding-bottom: 0px;
@@ -222,13 +227,13 @@ main {
 }
 
 .post-content code {
-	background-color: #e0e0e0 !important;
+	background-color: @color-codequote-bg !important;
 	padding-left: 5px;
 	padding-right: 5px;
 }
 
 .post-content blockquote {
-	border-color: #e0e0e0 !important;
+	border-color: @color-codequote-bg !important;
 }
 
 .post-content ul {
@@ -267,6 +272,13 @@ main {
 	height: 6rem;
 }
 
+.author-meta-url {
+	font-size: 1.5rem;
+}
+/******************************************************************************/
+
+/** 11. Side wide footer
+*******************************************************************************/
 footer.page-footer {
 	margin-top: 0px;
 	padding-top: 0px;
@@ -281,10 +293,6 @@ footer.page-footer {
 .footer-copyright {
 	margin-bottom: 0px;
 	font-size: 1.1rem;
-}
-
-.author-meta-url {
-	font-size: 1.5rem;
 }
 
 .footer-social-icons {
@@ -306,9 +314,24 @@ footer.page-footer {
   transform: translateY(-10px);
 }
 
-/** 07. Media Queries
-*******************************************************************************/
+.social {
+  margin: 15px 0 0 0;
+	text-align: center;
+}
 
+.social ul {
+  margin: 0;
+  padding: 0;
+	list-style: none;
+}
+
+.social ul li {
+	display: inline-block;
+}
+/******************************************************************************/
+
+/** 12. Media Queries
+*******************************************************************************/
 @media screen and (max-width: 600px) {
 	.blog-logo {
         display: none;
@@ -318,7 +341,4 @@ footer.page-footer {
 			 display: inline;
 	}
 }
-
-/** 08. Imports
-*******************************************************************************/
-@import "social-icons";
+/******************************************************************************/

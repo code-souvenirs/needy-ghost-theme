@@ -106,7 +106,7 @@ function ApplyPostContentTransformation() {
     $(this).attr('target', '_blank');
   });
 
-  function casperFullImg() {
+  function fulImageResize() {
       $("img").each( function() {
           var contentWidth = $(".post-content").outerWidth(); // Width of the content
           var imageWidth = $(this)[0].naturalWidth; // Original image resolution
@@ -119,8 +119,8 @@ function ApplyPostContentTransformation() {
       });
   }
 
-  casperFullImg();
-  $(window).smartresize(casperFullImg);
+	fulImageResize();
+  $(window).smartresize(fulImageResize);
 
 	/** Fitvids [Youtube|Vimeo] **/
 	if(jQuery(".fullwidthbanner iframe").length < 1 && jQuery(".fullscreenbanner iframe").length < 1 && jQuery(".fullscreenvideo").length < 1) { // disable fitvids if revolution slider video is present!
