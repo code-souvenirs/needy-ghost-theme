@@ -17,18 +17,22 @@ Header | Footer | Center | Single right sidebar.
 
 ###Preview:
 
- Needy ghost theme is **previewed live (demo)** at [Jsinh's Blog](http://blog.jsinh.in). "Eat your own dog food" theory. This blog will always run the latest version of Ghost (as soon as released) and latest version of this theme which is **Version: 1.2.2** at the moment.
+ Needy ghost theme is **previewed live (demo)** at [Jsinh's Blog](http://blog.jsinh.in). "Eat your own dog food" theory. This blog will always run the latest version of Ghost (as soon as released) and latest version of this theme which is **Version: 1.2.3** at the moment.
 
 ---
 
 ###Works on:
 
- *	Developed and tested with Ghost Version - v0.6.4.
+ *	Developed and tested with Ghost Version - v0.7.0.
  	Having issues with older or other version of ghost? feel free to connect, I would try to help.
 
 ---
 
 ###Release change-log:
+
+**Version - 1.2.3**
+* jQuery is not part of Ghost framework / scripts anymore, so we load it from Google CDN here onwards.
+* Tested with Ghost's latest major upgrade - 0.7.0.
 
 **Version - 1.2.2**
 * Refactored and now uses [Materialize CSS](http://materializecss.com/) as base. No more bootstrap.
