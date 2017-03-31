@@ -123,7 +123,8 @@ I would be happy to add your blog in the list here !!
 
 Currently used by:
 
-* [Jsinh - Me](http://blog.jsinh.in)
+* [Jsinh - Me](https://blog.jsinh.in)
+* [Bruno Henc](https://www.brunohenc.from.hr)
 
 ---
 
